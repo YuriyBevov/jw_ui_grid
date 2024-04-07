@@ -1,0 +1,34 @@
+include lw-radio-btn
+include lw-btn
+include lw-controls-with-desc
+include lw-switcher
+include lw-main-input
+include lw-textarea
+include lw-logo
+
+mixin lw-control-group(ctrls, modifier = null)
+    .lw-control-group(class = modifier ? modifier : null)
+        each ctrl of ctrls
+            if ctrl.type == 'group-title'
+                span.lw-control-group-title!= ctrl.text
+
+            if ctrl.type == 'radio' 
+                +lw-radio-btn(ctrl)
+            
+            if ctrl.type == 'controls-with-desc'
+                +lw-controls-with-desc(ctrl)
+            
+            if ctrl.type == 'button'
+                +lw-btn(ctrl)
+            
+            if ctrl.type == 'switcher'
+                +lw-switcher(ctrl)
+            
+            if ctrl.type == 'text'
+                +lw-main-input(ctrl)
+            
+            if ctrl.type == 'textarea'
+                +lw-textarea(ctrl)
+            
+            if ctrl.type == 'logo'
+                +lw-logo(ctrl)

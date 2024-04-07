@@ -1,4 +1,5 @@
 extends layouts/main-layout.pug
+include mixins/main-section
 
 block variables
   -
@@ -7,8 +8,11 @@ block variables
     const keywords = ""
 
 block content
-  //.index
-    include ./sections/index-page/intro
+  include content/city-data
+  
+  .lw-main-content
+    each item of cityData      
+      +main-section(item)
 
 block modals
-  //include ./modals/...
+

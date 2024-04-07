@@ -3,25 +3,36 @@
 
 :root {
     // base
-    --font-family: "Montserrat", sans-serif;
-    --content-width: 1240px;
-    --content-fluid-width: 1790px;
-    --container-offset: 15px;
+    --font-family: "Lato", sans-serif;
+    --content-width: 1720px;
+    // --content-fluid-width: 1790px;
+    --container-offset: 30px;
     --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
-    --container-fluid-width: calc(var(--content-fluid-width) + (var(--container-offset) * 2));
+    // --container-fluid-width: calc(var(--content-fluid-width) + (var(--container-offset) * 2));
 
     // colors
-    --white: #fff;
+    --white: #ffffff;
     --black: #000000;
+    --lightgray: #dedede;
+    --gray: #757575;
 
-    --accent: #05376C;
-    --warning: #fff4d4;
-    --danger: #f58128;
-    --skyblue: #e5eaf0;
-    --light: #e0e0e0;
-    --gray: #f8f8f8;
+    --success: #4caf50;
+
+    --base-text-color: var(--gray);
+    --main-title-color: #757575;
+    --section-border-color: var(--lightgray);
+  
+
+    // --accent: #05376C;
+    // --warning: #fff4d4;
+    // --danger: #f58128;
+    // --skyblue: #e5eaf0;
+    // --light: #e0e0e0;
+    // --gray: #f8f8f8;
 
     --main-bg: var(--white);
+
+    --main-offset-bottom: 25px;
 
     // scrollbar
     --main-scrollbar-width: 6px;

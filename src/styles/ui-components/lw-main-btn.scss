@@ -1,0 +1,26 @@
+:root {
+    --lw-main-btn-font-size: 14px;
+    --lw-main-btn-font-weight: 400;
+
+    --lw-main-btn-padding: 8px 12px;
+    --lw-main-btn-color: #ffffff;
+    --lw-main-btn-bg-color: #4caf50;
+    --lw-main-btn-radius: 3px;
+}
+
+.lw-main-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: var(--lw-main-btn-font-size);
+    font-weight: var(--lw-main-btn-font-weight);
+
+    border: none;
+    padding: var(--lw-main-btn-padding);
+    color: var(--lw-main-btn-color);
+    background-color: var(--lw-main-btn-bg-color);
+    border-radius: var(--lw-main-btn-radius);
+
+    cursor: pointer;
+}

@@ -1,0 +1,18 @@
+:root {
+    --lw-main-input-radius: 6px;
+    --lw-main-input-color: #333333;
+    --lw-main-input-bg: transparent;
+    --lw-main-input-inner-offset: 8px 12px;
+    --lw-main-input-border: 1px solid #dedede;
+    --lw-main-input-max-width: 500px;
+}
+
+.lw-main-input {
+    flex-grow: 1;
+    max-width: var(--lw-main-input-max-width);
+    color: var(--lw-main-input-color);
+    background-color: var(--lw-main-input-bg);
+    padding: var(--lw-main-input-inner-offset);
+    border-radius: var(--lw-main-input-radius);
+    border: var(--lw-main-input-border);
+}

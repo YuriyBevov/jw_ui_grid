@@ -1,0 +1,734 @@
+
+-
+    const razdel = {
+        title: 'Раздел',
+
+        controlRows: [
+            {
+                cols: 2,
+
+                col2Modifier: 'lw-flex-column',
+
+                controlGroups: [
+                    {
+                        modifier: 'lw-control-group--radio',
+                        controlsGroup: [[
+                            {
+                                type: 'radio',
+                                title: 'Аренда',
+                                name: 'section',
+                                id: 'section_1'
+                            },
+                            {
+                                type: 'radio',
+                                title: 'Продажа',
+                                name: 'section',
+                                id: 'section_2' 
+                            },
+                        ]],
+                    }                     
+                ],
+
+                controlGroups2: [
+                    {
+                        
+                        modifier: 'lw-justify-end lw-no-offset',
+                        controlsGroup: [
+                            [
+                                {
+                                    type: 'controls-with-desc',
+                                    text: 'Собственник:',
+                                    modifier: 'lw-justify-end',
+                                    groups: [
+                                        [
+                                            {
+                                                type: 'button',
+                                                text: 'Константинов Константин Константинович',
+                                                tag: 'a',
+                                                href: '#',
+                                                cls: 'lw-simple-btn lw-simple-btn--info-color',
+                                            }
+                                        ],
+                                    ]
+                                },
+                            ],
+                            
+                            [
+                                {
+                                    type: 'button',
+                                    modifier: 'lw-main-btn--simple',
+
+                                    tag: 'button',
+                                    cls: 'lw-simple-btn lw-simple-btn--success-color',
+                                    text: 'Другие объекты собственника',
+                                    
+                                    icon: 'icon-attach.svg',
+                                    iconWidth: '16',
+                                    iconHeight: '16',
+                                    
+                                }
+                            ]
+                        ],
+                    }                     
+                ],
+            },
+        ]
+    }
+
+-
+    const tip = {
+        title: 'Тип объекта',
+        controlRows: [
+            {
+                cols: 1,
+
+                controlGroups: [
+
+                    {
+                        modifier: 'lw-control-group--radio',
+                        controlsGroup: [[
+                            {
+                                type: 'radio',
+                                title: 'Квартиры',
+                                name: 'estateType',
+                                id: 'estateType_1'
+                            },
+                            
+                            {
+                                type: 'radio',
+                                title: 'Комнаты',
+                                name: 'estateType',
+                                id: 'estateType_2'
+                            },
+
+                            {
+                                type: 'radio',
+                                title: 'Коммерция',
+                                name: 'estateType',
+                                id: 'estateType_3'
+                            },
+
+                            {
+                                type: 'radio',
+                                title: 'Дома',
+                                name: 'estateType',
+                                id: 'estateType_4'
+                            },
+                            
+                            {
+                                type: 'radio',
+                                title: 'Части домов',
+                                name: 'estateType',
+                                id: 'estateType_5'
+                            },
+
+                            {
+                                type: 'radio',
+                                title: 'Участки',
+                                name: 'estateType',
+                                id: 'estateType_6'
+                            },
+                        ]],
+                    }
+
+                ],
+            },
+        ]
+    }
+
+-
+    const srok = {
+        title: 'Срок',
+
+        controlRows: [
+            {
+                cols: 1,
+
+                controlGroups: [
+
+                    {
+                        modifier: 'lw-control-group--radio',
+                        controlsGroup: [[
+                            {
+                                type: 'radio',
+                                title: 'Длительно',
+                                name: 'duration',
+                                id: 'duration_1'
+                            },
+                            
+                            {
+                                type: 'radio',
+                                title: 'Несколько месяцев',
+                                name: 'duration',
+                                id: 'duration_2'
+                            },
+
+                            {
+                                type: 'radio',
+                                title: 'Посуточно',
+                                name: 'duration',
+                                id: 'duration_3'
+                            },
+                        ]],
+                    }
+
+                ],
+            },
+        ]
+    }
+
+-
+    const udobstva = {
+        title: 'Удобства',
+
+        controlRows: [
+            {
+                cols: 2,
+
+                controlGroups: [
+                    {
+                        modifier: 'lw-flex-column',
+
+                        controlsGroup: [ 
+                            [
+                                {
+                                    type: 'group-title',
+                                    text: 'Санузлы'
+                                },
+
+                                {
+                                    type: 'switcher',
+                                    title: 'Ванна',
+                                    id: 'switcher_1'
+                                },
+
+                                {
+                                    type: 'switcher',
+                                    title: 'Душевая кабина',
+                                    id: 'switcher_2'
+                                },
+
+                                {
+                                    type: 'switcher',
+                                    title: 'Джакузи',
+                                    id: 'switcher_3'
+                                },
+
+                                {
+                                    type: 'switcher',
+                                    title: 'Сауна',
+                                    id: 'switcher_4'
+                                },
+                            ],
+
+                            [
+                                {
+                                    type: 'group-title',
+                                    text: 'Безопасность'
+                                },
+
+                                {
+                                    type: 'switcher',
+                                    title: 'Пожарная выход',
+                                    id: 'switcher_5'
+                                },
+
+                                {
+                                    type: 'switcher',
+                                    title: 'Консьерж',
+                                    id: 'switcher_6'
+                                },
+
+                                {
+                                    type: 'switcher',
+                                    title: 'Видеодомофон',
+                                    id: 'switcher_7'
+                                },
+
+                                {
+                                    type: 'switcher',
+                                    title: 'Сигнализация',
+                                    id: 'switcher_8'
+                                },
+
+                                {
+                                    type: 'switcher',
+                                    title: 'Охрана',
+                                    id: 'switcher_9'
+                                },
+                            ],
+
+                            [
+                                {
+                                    type: 'group-title',
+                                    text: 'Инфраструктура'
+                                },
+
+                                {
+                                    type: 'switcher',
+                                    title: 'Бассейн',
+                                    id: 'switcher_10'
+                                },
+
+                                {
+                                    type: 'switcher',
+                                    title: 'Тренажерный зал',
+                                    id: 'switcher_11'
+                                },
+
+                                {
+                                    type: 'switcher',
+                                    title: 'SPA комплекс',
+                                    id: 'switcher_12'
+                                },
+                            ],
+
+                            [
+                                {
+                                    type: 'group-title',
+                                    text: 'Прочее'
+                                },
+
+                                {
+                                    type: 'switcher',
+                                    title: 'Гардеробная',
+                                    id: 'switcher_13'
+                                },
+
+                                {
+                                    type: 'switcher',
+                                    title: 'Лофт',
+                                    id: 'switcher_14'
+                                },
+
+                                {
+                                    type: 'switcher',
+                                    title: 'Мусоропровод',
+                                    id: 'switcher_15'
+                                },
+                            ]
+                        ]
+                    }                     
+                ],
+
+                controlGroups2: [
+                    {
+                        modifier: 'lw-flex-column',
+                        controlsGroup: [
+                            [
+
+                                {
+                                    type: 'group-title',
+                                    text: 'Оборудование'
+                                },
+
+                                {
+                                    type: 'switcher',
+
+                                    title: 'Интернет',
+                                    id: 'switcher_16'
+                                },
+
+                                {
+                                    type: 'switcher',
+
+                                    title: 'Посудомоечная машина',
+                                    id: 'switcher_17'
+                                },
+
+                                {
+                                    type: 'switcher',
+
+                                    title: 'Стиральная машина',
+                                    id: 'switcher_18'
+                                },
+
+                                {
+                                    type: 'switcher',
+
+                                    title: 'Сушильная машина',
+                                    id: 'switcher_19'
+                                },
+
+                                {
+                                    type: 'switcher',
+
+                                    title: 'Бойлер',
+                                    id: 'switcher_20'
+                                },
+
+                                {
+                                    type: 'switcher',
+
+                                    title: 'Камин',
+                                    id: 'switcher_21'
+                                },
+
+                                {
+                                    type: 'switcher',
+
+                                    title: 'Кабельное/спутниковое ТВ',
+                                    id: 'switcher_22'
+                                },
+
+                                {
+                                    type: 'switcher',
+
+                                    title: 'Кондиционер',
+                                    id: 'switcher_23'
+                                },
+
+                                {
+                                    type: 'switcher',
+
+                                    title: 'Интернет',
+                                    id: 'switcher_24'
+                                },
+
+                                {
+                                    type: 'switcher',
+
+                                    title: 'Подогрев полов',
+                                    id: 'switcher_25'
+                                }
+                            ],
+
+                            [
+
+                                {
+                                    type: 'group-title',
+                                    text: 'Виды и расположение'
+                                },
+
+                                {
+                                    type: 'switcher',
+
+                                    title: 'Вид на реку',
+                                    id: 'switcher_26'
+                                },
+
+                                {
+                                    type: 'switcher',
+
+                                    title: 'Видовая квартира',
+                                    id: 'switcher_27'
+                                },
+
+                                {
+                                    type: 'switcher',
+
+                                    title: 'Около воды',
+                                    id: 'switcher_28'
+                                },
+
+                                {
+                                    type: 'switcher',
+
+                                    title: 'Лесной участок',
+                                    id: 'switcher_29'
+                                }
+                            ]
+                        ]
+                    }                     
+                ]
+            }
+        ]
+    }
+
+-
+    const reklama = {
+        title: 'Реклама',
+
+        controlRows: [
+            {
+                cols: 1,
+                controlGroups: [
+                    {
+                        modifier: 'lw-mobile-nooffset',
+                        controlsGroup: [
+                            [
+                                {
+                                    type: 'controls-with-desc',
+                                    text: 'Описание для площадок:',
+                                    modifier: 'lw-controls-with-desc--table-grid lw-mobile-column',
+
+                                    groups: [
+                                        [
+                                            {
+                                                type: 'textarea', 
+                                            }
+                                        ],
+                                    ]
+                                }
+                            ]
+                        ]
+                    },
+                    {
+                        modifier: 'lw-mobile-nooffset',
+                        controlsGroup: [
+                            [
+                                {
+                                    type: 'controls-with-desc',
+                                    text: 'Заголовок объявления:',
+                                    modifier: 'lw-controls-with-desc--table-grid lw-mobile-column',
+
+                                    groups: [
+                                        [
+                                            {
+                                                type: 'text',
+                                            }
+                                        ],
+                                    ]
+                                }
+                            ]
+                        ]
+                    },
+                    {
+                        modifier: 'lw-mobile-nooffset',
+                        controlsGroup: [
+                            [
+                                {
+                                    type: 'controls-with-desc',
+                                    text: 'Смена id для площадок:',
+                                    modifier: 'lw-controls-with-desc--table-grid lw-mobile-column',
+
+                                    groups: [
+                                        [
+                                            {
+                                                type: 'logo',
+                                                img: 'avito-logo.png',
+                                                imgWidth: '80',
+                                                imgHeight: '24',
+                                                imgAlt: 'Avito'
+                                            },
+
+                                            {
+                                                type: 'text',
+                                            },
+
+                                            {
+                                                type: 'button',
+                                                text: 'Сменить id',
+                                                tag: 'button',
+                                                cls: 'lw-main-btn',
+                                            }
+                                        ],
+                                        [
+                                            {
+                                                type: 'logo',
+                                                img: 'cian-logo.png',
+                                                imgWidth: '80',
+                                                imgHeight: '24',
+                                                imgAlt: 'Cian'
+                                            },
+
+                                            {
+                                                type: 'text',
+                                            },
+
+                                            {
+                                                type: 'button',
+                                                text: 'Сменить id',
+                                                tag: 'button',
+                                                cls: 'lw-main-btn',
+                                            }
+                                        ],
+                                    ]
+                                }
+                            ]
+                        ]
+                    },
+                    {
+                        modifier: 'lw-mobile-nooffset',
+                        controlsGroup: [
+                            [
+                                {
+                                    type: 'controls-with-desc',
+                                    text: 'Описание для сайта:',
+                                    modifier: 'lw-controls-with-desc--table-grid lw-mobile-column',
+
+                                    groups: [
+                                        [
+                                            {
+                                                type: 'textarea',
+                                            }
+                                        ],
+                                    ]
+                                }
+                            ]
+                        ]
+                    },
+                    {
+                        modifier: 'lw-mobile-nooffset',
+                        controlsGroup: [
+                            [
+                                {
+                                    type: 'controls-with-desc',
+                                    text: 'Описание для сайта на англ.:',
+                                    modifier: 'lw-controls-with-desc--table-grid lw-mobile-column',
+
+                                    groups: [
+                                        [
+                                            {
+                                                type: 'textarea',
+                                            }
+                                        ],
+                                    ]
+                                }
+                            ]
+                        ]
+                    },
+                ]
+            }
+        ]
+    }
+
+-
+    const prochee = {
+        title: 'Прочее',
+
+        controlRows: [
+            {
+                cols: 1,
+                
+                controlGroups: [
+                    {
+                        modifier: 'lw-mobile-nooffset', 
+                        controlsGroup: [
+                            [
+                                {
+                                    type: 'controls-with-desc',
+                                    text: 'Агент:',
+                                    modifier: 'lw-mobile-column',
+
+                                    groups: [
+                                        [
+                                            {
+                                                type: 'button',
+                                                text: 'Константинов Константин Константинович',
+                                                tag: 'a',
+                                                href: '#',
+                                                cls: 'lw-simple-btn lw-simple-btn--info-color',
+                                            }
+                                        ],
+                                    ]
+                                },
+                            ],
+
+                            [
+                                {
+                                    type: 'controls-with-desc',
+                                    text: 'Кто нашел объект:',
+                                    modifier: 'lw-mobile-column',
+
+                                    groups: [
+                                        [
+                                            {
+                                                type: 'button',
+                                                text: 'Константинов Константин Константинович',
+                                                tag: 'a',
+                                                href: '#',
+                                                cls: 'lw-simple-btn lw-simple-btn--info-color',
+                                            }
+                                        ],
+                                    ]
+                                },
+                            ],
+
+                            [
+                                {
+                                    type: 'controls-with-desc',
+                                    text: 'Цена продажи:',
+                                    modifier: 'lw-controls-with-desc--table-grid lw-align-center lw-mobile-column',
+
+                                    groups: [
+                                        [
+                                            {
+                                                type: 'text',
+                                            }
+                                        ],
+                                    ]
+                                },
+                            ],
+
+                            [
+                                {
+                                    type: 'switcher',
+                                    title: 'Ключи в офисе',
+                                    id: 'other_1'
+                                },
+                                {
+                                    type: 'switcher',
+                                    title: 'Есть обременения',
+                                    id: 'other_2'
+                                },
+                            ],
+
+                            [
+                                {
+                                    type: 'controls-with-desc',
+                                    text: 'Комментарий менеджера Intermark Property:',
+                                    modifier: 'lw-controls-with-desc--table-grid lw-mobile-column',
+
+                                    groups: [
+                                        [
+                                            {
+                                                type: 'textarea',
+                                            }
+                                        ],
+                                    ]
+                                }
+                            ],
+
+                            [
+                                {
+                                    type: 'controls-with-desc',
+                                    text: 'Внутренний комментарий Intermark Relocation:',
+                                    modifier: 'lw-controls-with-desc--table-grid lw-mobile-column',
+
+                                    groups: [
+                                        [
+                                            {
+                                                type: 'textarea',
+                                            }
+                                        ],
+                                    ]
+                                }
+                            ]
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+
+-
+    const pustoi = {
+        title: 'Заголовок',
+
+        controlRows: [
+            {
+                cols: 'Количество колонок в ряду',
+                controlGroups: [
+                    {
+                        modifier: '',
+                        controlsGroup: [
+                            [
+                                
+                            ]
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+
+- 
+    const cityData = [
+        razdel,
+        tip,
+        srok,
+        udobstva,
+        reklama,
+        prochee
+    ]

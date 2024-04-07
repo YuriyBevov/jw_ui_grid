@@ -1,0 +1,5 @@
+mixin lw-switcher(data)
+    .lw-switcher
+        input(type= data.switcherType == 'radio' ? 'radio' : 'checkbox' id= data.id name= data.name ? data.name : null)
+        label(for= data.id)
+            span!= data.title
