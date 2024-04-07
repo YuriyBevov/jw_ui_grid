@@ -610,7 +610,7 @@ a {
 .lw-control-group--radio {
   gap: 3px;
 }
-@media (max-width: 534px) {
+@media (max-width: 620px) {
   .lw-control-group--radio .lw-radio-btn {
     width: 100%;
   }
