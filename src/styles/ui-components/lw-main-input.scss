@@ -7,12 +7,26 @@
     --lw-main-input-max-width: 500px;
 }
 
-.lw-main-input {
+
+
+.lw-main-input-wrapper {
+    display: flex;
+    align-items: center;
     flex-grow: 1;
-    max-width: var(--lw-main-input-max-width);
-    color: var(--lw-main-input-color);
-    background-color: var(--lw-main-input-bg);
-    padding: var(--lw-main-input-inner-offset);
-    border-radius: var(--lw-main-input-radius);
-    border: var(--lw-main-input-border);
+    gap: 10px;
+
+    span {
+        font-size: 14px;
+        font-weight: 400;
+    }
+
+    input {
+        width: 100%;
+        max-width: var(--lw-main-input-max-width);
+        color: var(--lw-main-input-color);
+        background-color: var(--lw-main-input-bg);
+        padding: var(--lw-main-input-inner-offset);
+        border-radius: var(--lw-main-input-radius);
+        border: var(--lw-main-input-border);
+    }
 }

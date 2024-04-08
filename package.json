@@ -47,6 +47,7 @@
     "webpack-stream": "^7.0.0"
   },
   "dependencies": {
+    "custom-select": "^1.1.15",
     "swiper": "^8.4.5"
   },
   "repository": {

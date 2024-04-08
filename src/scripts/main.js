@@ -1,1 +1,1 @@
-//import ./modules/test;
+import 'custom-select'

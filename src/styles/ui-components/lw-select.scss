@@ -1,0 +1,66 @@
+.lw-select {
+    flex-grow: 1;
+    
+    .custom-select {
+        &-container {
+            width: 100%;
+        }
+
+        &-opener {
+            font-size: 14px;
+            font-weight: 400;
+            color: #333333;
+            padding: 10px 16px;
+            border-radius: 6px;
+            border: 1px solid #dedede;
+            background-color: transparent;
+            padding-right: 50px;
+            width: 100%;
+            max-width: 500px;
+
+            position: relative;
+
+            &::after {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                right: 16px;
+                content: '';
+                width: 16px;
+                height: 16px;
+                background-image: url("../assets/img/icon-burger.svg");;
+                background-repeat: no-repeat;
+                background-size: 16px;
+                background-position: center;
+            }
+        }
+
+        &-panel {
+            top: calc(100% + 2px);
+            width: 100%;
+            transition: none !important;
+            min-width: fit-content;
+            max-width: 500px;
+
+            background-color: #ffffff;
+            cursor: pointer;
+        }
+
+        &-option {
+            padding: 10px 16px;
+            border: 1px solid #dedede;
+            background-color: transparent;
+            border: 1px solid #dedede;
+            border-bottom: none;
+        }
+
+        &-option:first-child {
+            border-radius: 6px 6px 0 0;
+        }
+
+        &-option:last-child {
+            border-bottom: 1px solid #dedede;
+            border-radius: 0 0 6px 6px;
+        }
+    }
+}

@@ -178,6 +178,152 @@
     }
 
 -
+    const usloviya = {
+        title: 'Условия проживания',
+
+        controlRows: [
+            {
+                cols: 1,
+
+                controlGroups: [
+                    
+                    {
+                        modifier: 'lw-control-group--2cols',
+                        controlsGroup:[
+                            [
+                                {
+                                    type: 'switcher',
+                                    title: 'Можно ли с детьми',
+                                    id: 'usloviya_1'
+                                },
+  
+                                {
+                                    type: 'controls-with-desc',
+                                    text: 'Комментарий по детям:',
+                                        modifier: 'lw-controls-with-desc--table-grid lw-mobile-column',
+
+                                    groups: [
+                                        [
+                                            {
+                                                type: 'textarea',
+                                            }
+                                        ],
+                                    ]
+                                },
+                            ],[
+                                {
+                                    type: 'switcher',
+                                    title: 'Можно ли с животными',
+                                    id: 'usloviya_2'
+                                },
+
+                                {
+                                    type: 'controls-with-desc',
+                                    text: 'Комментарий по животным:',
+                                        modifier: 'lw-controls-with-desc--table-grid lw-mobile-column',
+
+                                    groups: [
+                                        [
+                                            {
+                                                type: 'textarea',
+                                            }
+                                        ],
+                                    ]
+                                },
+                            ],[
+                                {
+                                    type: 'select',
+                                    options: ['Без мебели', 'С мебелью']
+                                },
+
+                                {
+                                    type: 'controls-with-desc',
+                                    text: 'Комментарий по мебели:',
+                                        modifier: 'lw-controls-with-desc--table-grid lw-mobile-column',
+
+                                    groups: [
+                                        [
+                                            {
+                                                type: 'textarea',
+                                            }
+                                        ],
+                                    ]
+                                },
+                            ],[
+                                {
+                                    type: 'multiple',
+
+                                    controls: [
+                                        {
+                                            type: 'select',
+                                            options: ['Без паркинга', 'С паркингом']
+                                        },
+                                        {
+                                            type: 'text',
+                                            text: 'Кол-во мест:',
+                                            modifier: 'lw-text-control-xs' 
+                                        }
+                                    ]
+                                },
+
+                                {
+                                    type: 'controls-with-desc',
+                                    text: 'Комментарий по паркингу:',
+                                    modifier: 'lw-controls-with-desc--table-grid lw-mobile-column',
+
+                                    groups: [
+                                        [
+                                            {
+                                                type: 'textarea',
+                                            }
+                                        ],
+                                    ]
+                                },
+                            ],[
+                                {
+                                    type: 'switcher',
+                                    modifier: 'lw-full-width',
+                                    title: 'Машиноместо включено в стоимость',
+                                    id: 'usloviya_3'
+                                },
+                            ],[
+                                {
+                                    type: 'controls-with-desc',
+                                    text: 'Миграционый <br>учет:',
+                                    modifier: 'lw-controls-with-desc--table-grid lw-mobile-column lw-full-width',
+
+                                    groups: [
+                                        [
+                                            {
+                                                type: 'select',
+                                                options: ['Да', 'Нет', 'Обсуждается']
+                                            }
+                                        ],
+                                    ]
+                                },
+                            ],[
+                                {
+                                    type: 'switcher',
+                                    modifier: 'lw-full-width',
+                                    title: 'Курение разрешено',
+                                    id: 'usloviya_4'
+                                },
+                            ],[
+                                {
+                                    type: 'switcher',
+                                    modifier: 'lw-full-width',
+                                    title: 'Вечеринки разрешены',
+                                    id: 'usloviya_5'
+                                },
+                            ]
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+
+-
     const udobstva = {
         title: 'Удобства',
 
@@ -734,32 +880,12 @@
         ]
     }
 
--
-    const pustoi = {
-        title: 'Заголовок',
-
-        controlRows: [
-            {
-                cols: 'Количество колонок в ряду',
-                controlGroups: [
-                    {
-                        modifier: '',
-                        controlsGroup: [
-                            [
-                                
-                            ]
-                        ]
-                    }
-                ]
-            }
-        ]
-    }
-
 - 
     const cityData = [
         razdel,
         tip,
         srok,
+        usloviya,
         udobstva,
         reklama,
         prochee

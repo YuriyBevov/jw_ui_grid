@@ -1,2 +1,5 @@
 mixin lw-main-input(data)
-    input(type="text" placeholder= data.placeholder ? data.placeholder : null).lw-main-input
+    .lw-main-input-wrapper
+        if data.text
+            span!= data.text 
+        input(class= data.modifier ? data.modifier : null type="text" placeholder= data.placeholder ? data.placeholder : null)

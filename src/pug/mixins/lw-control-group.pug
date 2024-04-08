@@ -5,6 +5,8 @@ include lw-switcher
 include lw-main-input
 include lw-textarea
 include lw-logo
+include lw-select
+include lw-multiple
 
 mixin lw-control-group(ctrls, modifier = null)
     .lw-control-group(class = modifier ? modifier : null)
@@ -32,3 +34,9 @@ mixin lw-control-group(ctrls, modifier = null)
             
             if ctrl.type == 'logo'
                 +lw-logo(ctrl)
+            
+            if ctrl.type == 'select'
+                +lw-select(ctrl)
+
+            if ctrl.type == 'multiple'
+                +lw-multiple(ctrl)

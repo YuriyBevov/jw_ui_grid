@@ -1,0 +1,6 @@
+mixin lw-select(data)
+    if data.options
+        .lw-select
+            select.custom-select
+                each value in data.options
+                    option(value= value)!= value
