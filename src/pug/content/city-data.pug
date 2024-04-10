@@ -3,7 +3,7 @@
     const razdel = {
         title: 'Раздел',
 
-        controlRows: [
+        sectionRows: [
             {
                 cols: 2,
 
@@ -78,7 +78,7 @@
 -
     const tip = {
         title: 'Тип объекта',
-        controlRows: [
+        sectionRows: [
             {
                 cols: 1,
 
@@ -140,7 +140,7 @@
     const srok = {
         title: 'Срок',
 
-        controlRows: [
+        sectionRows: [
             {
                 cols: 1,
 
@@ -178,18 +178,115 @@
     }
 
 -
-    const usloviya = {
-        title: 'Условия проживания',
-
-        controlRows: [
+    const obekt = {
+        title: 'Объект',
+        sectionRows:[
             {
                 cols: 1,
 
                 controlGroups: [
-                    
+                    {
+                        modifier: '',
+                        controlsGroup: [
+                            [
+                                {
+                                    type: 'controls-with-desc',
+                                    text: 'ID:',
+                                    modifier: 'lw-controls-with-desc--table-grid lw-mobile-column',
+
+                                    groups: [
+                                        [
+                                            {
+                                                type: 'simple-text',
+                                                text: '12345678910'
+                                            }
+                                        ],
+                                    ]
+                                }
+                            ]
+                        ]
+                    },
+                ]
+            },
+
+            {
+                cols: 1,
+                
+                controlGroups: [
+                    {
+                        modifier: '',
+                        controlsGroup: [
+                            [
+                                {
+                                    type: 'controls-with-desc',
+                                    text: 'Статус:',
+                                    modifier: 'lw-controls-with-desc--table-grid lw-align-center lw-mobile-column',
+
+                                    groups: [
+                                        [
+                                            {
+                                                type: 'select',
+                                                options: ['Свободна', 'Сдается']
+                                            }
+                                        ],
+                                    ]
+                                },
+                            ]
+                        ],
+                    }
+                ]
+            },
+
+            {
+                cols: 1,
+
+                controlGroups: [
+                    {
+                        controlsGroup: [
+                            [
+                                {
+
+                                    type: 'controls-with-desc',
+                                    text: 'Дата прозвона:',
+                                    modifier: 'lw-controls-with-desc--table-grid lw-align-center lw-mobile-column',
+
+                                    groups: [
+                                        [
+                                            {
+                                                type: 'simple-text',
+                                                text: '12/06/2023'
+                                                
+                                            },
+                                            {
+                                                type: 'button',
+                                                tag: 'button',
+                                                cls: "lw-simple-btn",
+                                                icon: 'icon-text.svg',
+                                                iconWidth: '16',
+                                                iconHeight: '16'
+                                            }
+                                        ],
+                                    ]
+                                }
+                            ]
+                        ]
+                    }
+                ]
+            },
+        ]
+    }
+
+-
+    const usloviya = {
+        title: 'Условия проживания',
+        sectionRows: [
+            {
+                cols: 1,
+
+                controlGroups: [
                     {
                         modifier: 'lw-control-group--2cols',
-                        controlsGroup:[
+                        controlsGroup: [
                             [
                                 {
                                     type: 'switcher',
@@ -210,7 +307,21 @@
                                         ],
                                     ]
                                 },
-                            ],[
+                            ]
+                        ]
+                    }
+                ]
+            },
+
+            {
+                cols: 1,
+
+                colModifier: '',
+                controlGroups: [
+                    {
+                        modifier: 'lw-control-group--2cols',
+                        controlsGroup:[
+                            [
                                 {
                                     type: 'switcher',
                                     title: 'Можно ли с животными',
@@ -230,7 +341,20 @@
                                         ],
                                     ]
                                 },
-                            ],[
+                            ]
+                        ]
+                    }
+                ]
+            },
+
+            {
+                cols: 1,
+
+                controlGroups: [
+                    {
+                        modifier: 'lw-control-group--2cols',
+                        controlsGroup: [
+                            [
                                 {
                                     type: 'select',
                                     options: ['Без мебели', 'С мебелью']
@@ -249,7 +373,52 @@
                                         ],
                                     ]
                                 },
-                            ],[
+                            ],
+                        ]
+                    }
+                ]
+            },
+
+            {
+                cols: 1,
+
+                controlGroups: [
+                    {
+                        modifier: 'lw-control-group--2cols',
+                        controlsGroup: [
+                            [
+                                {
+                                    type: 'select',
+                                    options: ['Без мебели', 'С мебелью']
+                                },
+
+                                {
+                                    type: 'controls-with-desc',
+                                    text: 'Комментарий по мебели:',
+                                        modifier: 'lw-controls-with-desc--table-grid lw-mobile-column',
+
+                                    groups: [
+                                        [
+                                            {
+                                                type: 'textarea',
+                                            }
+                                        ],
+                                    ]
+                                },
+                            ],
+                        ]
+                    }
+                ]
+            },
+
+            {
+                cols: 1,
+
+                controlGroups: [
+                    {
+                        modifier: 'lw-control-group--2cols',
+                        controlsGroup: [
+                            [
                                 {
                                     type: 'multiple',
 
@@ -279,14 +448,40 @@
                                         ],
                                     ]
                                 },
-                            ],[
+                            ],
+                        ]
+                    }
+                ]
+            },
+
+            {
+                cols: 1,
+
+                controlGroups: [
+                    {
+                        modifier: 'lw-control-group--2cols',
+                        controlsGroup: [
+                            [
                                 {
                                     type: 'switcher',
                                     modifier: 'lw-full-width',
                                     title: 'Машиноместо включено в стоимость',
                                     id: 'usloviya_3'
                                 },
-                            ],[
+                            ],
+                        ]
+                    }
+                ]
+            },
+
+            {
+                cols: 1,
+
+                controlGroups: [
+                    {
+                        modifier: 'lw-control-group--2cols',
+                        controlsGroup: [
+                            [
                                 {
                                     type: 'controls-with-desc',
                                     text: 'Миграционый <br>учет:',
@@ -301,14 +496,40 @@
                                         ],
                                     ]
                                 },
-                            ],[
+                            ],
+                        ]
+                    }
+                ]
+            },
+
+            {
+                cols: 1,
+
+                controlGroups: [
+                    {
+                        modifier: 'lw-control-group--2cols',
+                        controlsGroup: [
+                            [
                                 {
                                     type: 'switcher',
                                     modifier: 'lw-full-width',
                                     title: 'Курение разрешено',
                                     id: 'usloviya_4'
                                 },
-                            ],[
+                            ],
+                        ]
+                    }
+                ]
+            },
+
+            {
+                cols: 1,
+
+                controlGroups: [
+                    {
+                        modifier: 'lw-control-group--2cols',
+                        controlsGroup: [
+                            [
                                 {
                                     type: 'switcher',
                                     modifier: 'lw-full-width',
@@ -319,7 +540,7 @@
                         ]
                     }
                 ]
-            }
+            },
         ]
     }
 
@@ -327,7 +548,7 @@
     const udobstva = {
         title: 'Удобства',
 
-        controlRows: [
+        sectionRows: [
             {
                 cols: 2,
 
@@ -585,12 +806,12 @@
     const reklama = {
         title: 'Реклама',
 
-        controlRows: [
+        sectionRows: [
             {
                 cols: 1,
                 controlGroups: [
                     {
-                        modifier: 'lw-mobile-nooffset',
+                        modifier: '',
                         controlsGroup: [
                             [
                                 {
@@ -608,9 +829,16 @@
                                 }
                             ]
                         ]
-                    },
+                    }
+                ]
+            },
+
+            {
+                cols: 1,
+
+                controlGroups: [
                     {
-                        modifier: 'lw-mobile-nooffset',
+                        modifier: '',
                         controlsGroup: [
                             [
                                 {
@@ -629,8 +857,15 @@
                             ]
                         ]
                     },
+                ]
+            },
+
+            {
+                cols: 1,
+
+                controlGroups: [
                     {
-                        modifier: 'lw-mobile-nooffset',
+                        modifier: '',
                         controlsGroup: [
                             [
                                 {
@@ -643,7 +878,7 @@
                                             {
                                                 type: 'logo',
                                                 img: 'avito-logo.png',
-                                                imgWidth: '80',
+                                                imgWidth: '65',
                                                 imgHeight: '24',
                                                 imgAlt: 'Avito'
                                             },
@@ -663,7 +898,7 @@
                                             {
                                                 type: 'logo',
                                                 img: 'cian-logo.png',
-                                                imgWidth: '80',
+                                                imgWidth: '65',
                                                 imgHeight: '24',
                                                 imgAlt: 'Cian'
                                             },
@@ -684,8 +919,15 @@
                             ]
                         ]
                     },
+                ]
+            },
+
+            {
+                cols: 1,
+
+                controlGroups: [
                     {
-                        modifier: 'lw-mobile-nooffset',
+                        modifier: '',
                         controlsGroup: [
                             [
                                 {
@@ -704,8 +946,43 @@
                             ]
                         ]
                     },
+                ]
+            },    
+
+
+            {
+                cols: 1,
+
+                controlGroups: [
                     {
-                        modifier: 'lw-mobile-nooffset',
+                        modifier: '',
+                        controlsGroup: [
+                            [
+                                {
+                                    type: 'controls-with-desc',
+                                    text: 'Описание для сайта:',
+                                    modifier: 'lw-controls-with-desc--table-grid lw-mobile-column',
+
+                                    groups: [
+                                        [
+                                            {
+                                                type: 'textarea',
+                                            }
+                                        ],
+                                    ]
+                                }
+                            ]
+                        ]
+                    },
+                ]
+            },        
+
+            {
+                cols: 1,
+
+                controlGroups: [
+                    {
+                        modifier: '',
                         controlsGroup: [
                             [
                                 {
@@ -725,7 +1002,7 @@
                         ]
                     },
                 ]
-            }
+            }, 
         ]
     }
 
@@ -733,13 +1010,13 @@
     const prochee = {
         title: 'Прочее',
 
-        controlRows: [
+        sectionRows: [
             {
                 cols: 1,
-                
+
                 controlGroups: [
                     {
-                        modifier: 'lw-mobile-nooffset', 
+                        modifier: '',
                         controlsGroup: [
                             [
                                 {
@@ -759,8 +1036,19 @@
                                         ],
                                     ]
                                 },
-                            ],
+                            ]
+                        ]
+                    },
+                ]
+            },
 
+            {
+                cols: 1,
+
+                controlGroups: [
+                    {
+                        modifier: 'lw-mobile-nooffset',
+                        controlsGroup: [
                             [
                                 {
                                     type: 'controls-with-desc',
@@ -779,8 +1067,75 @@
                                         ],
                                     ]
                                 },
-                            ],
+                            ]
+                        ]
+                    },
+                ]
+            },
 
+            {
+                cols: 1,
+
+                controlGroups: [
+                    {
+                        modifier: 'lw-mobile-nooffset',
+                        controlsGroup: [
+                            [
+                                {
+                                    type: 'controls-with-desc',
+                                    text: 'Источник:',
+                                    modifier: 'lw-controls-with-desc--table-grid lw-align-center lw-mobile-column',
+
+                                    groups: [
+                                        [
+                                            {
+                                                type: 'select',
+                                                options: ['Не выбрано', 'Авито', 'Циан']
+                                            }
+                                        ],
+                                    ]
+                                },
+                            ]
+                        ]
+                    },
+                ]
+            },
+        
+            {
+                cols: 1,
+
+                controlGroups: [
+                    {
+                        modifier: 'lw-mobile-nooffset',
+                        controlsGroup: [
+                            [
+                                {
+                                    type: 'controls-with-desc',
+                                    text: 'Менеджер продажи:',
+                                    modifier: 'lw-controls-with-desc--table-grid lw-align-center lw-mobile-column',
+
+                                    groups: [
+                                        [
+                                            {
+                                                type: 'select',
+                                                options: ['Не выбрано', '1', '2']
+                                            }
+                                        ],
+                                    ]
+                                },
+                            ]
+                        ]
+                    },
+                ]
+            },
+
+            {
+                cols: 1,
+
+                controlGroups: [
+                    {
+                        modifier: 'lw-mobile-nooffset',
+                        controlsGroup: [
                             [
                                 {
                                     type: 'controls-with-desc',
@@ -795,8 +1150,19 @@
                                         ],
                                     ]
                                 },
-                            ],
+                            ]
+                        ]
+                    },
+                ]
+            },
 
+            {
+                cols: 1,
+
+                controlGroups: [
+                    {
+                        modifier: 'lw-mobile-nooffset',
+                        controlsGroup: [
                             [
                                 {
                                     type: 'switcher',
@@ -808,8 +1174,20 @@
                                     title: 'Есть обременения',
                                     id: 'other_2'
                                 },
-                            ],
+                            ]
+                        ]
+                    },
+                ]
+            },
 
+
+            {
+                cols: 1,
+
+                controlGroups: [
+                    {
+                        modifier: 'lw-mobile-nooffset',
+                        controlsGroup: [
                             [
                                 {
                                     type: 'controls-with-desc',
@@ -824,8 +1202,19 @@
                                         ],
                                     ]
                                 }
-                            ],
+                            ]
+                        ]
+                    },
+                ]
+            },
 
+            {
+                cols: 1,
+                
+                controlGroups: [
+                    {
+                        modifier: '', 
+                        controlsGroup: [
                             [
                                 {
                                     type: 'controls-with-desc',
@@ -851,27 +1240,657 @@
 -
     const osnovnye = {
         title: 'Основные параметры',
-
-        controlRows: [
+        
+        sectionRows: [
             {
                 cols: 2,
+
                 controlGroups: [
                     {
                         modifier: '',
                         controlsGroup: [
                             [
-                                
+                                {
+                                    type: 'controls-with-desc',
+                                    text: 'Общая площадь:',
+                                    modifier: 'lw-controls-with-desc--table-grid lw-mobile-column lw-align-center',
+
+                                    groups: [
+                                        [
+                                            {
+                                                type: 'text',
+                                                note: 'кв.м.'
+                                            }
+                                        ],
+                                    ]
+                                }
+                            ],
+
+                            [
+                                {
+                                    type: 'controls-with-desc',
+                                    text: 'Жилая площадь:',
+                                    modifier: 'lw-controls-with-desc--table-grid lw-mobile-column lw-align-center',
+
+                                    groups: [
+                                        [
+                                            {
+                                                type: 'text',
+                                                note: 'кв.м.'
+                                            }
+                                        ],
+                                    ]
+                                },
+                            ],
+
+                            [
+                                {
+                                    type: 'controls-with-desc',
+                                    text: 'Площадь кухни:',
+                                    modifier: 'lw-controls-with-desc--table-grid lw-mobile-column lw-align-center',
+
+                                    groups: [
+                                        [
+                                            {
+                                                type: 'text',
+                                                note: 'кв.м.'
+                                            }
+                                        ],
+                                    ]
+                                },
+                            ],
+
+                            [
+                                {
+                                    type: 'controls-with-desc',
+                                    text: 'Кол-во комнат:',
+                                    modifier: 'lw-controls-with-desc--table-grid lw-mobile-column lw-align-center',
+
+                                    groups: [
+                                        [
+                                            {
+                                                type: 'text'
+                                            }
+                                        ],
+                                    ]
+                                },
+                            ],
+
+                            [
+                                {
+                                    type: 'controls-with-desc',
+                                    text: 'Кол-во спален:',
+                                    modifier: 'lw-controls-with-desc--table-grid lw-mobile-column lw-align-center',
+
+                                    groups: [
+                                        [
+                                            {
+                                                type: 'text'
+                                            }
+                                        ],
+                                    ]
+                                },
+                            ],
+
+                            [
+                                {
+                                    type: 'controls-with-desc',
+                                    text: 'Кухня:',
+                                    modifier: 'lw-controls-with-desc--table-grid lw-mobile-column lw-align-center',
+
+                                    groups: [
+                                        [
+                                            {
+                                                type: 'select',
+                                                options: ['Открытая', 'Закрытая']
+                                            }
+                                        ],
+                                    ]
+                                },
+                            ],
+
+                            [
+                                {
+                                    type: 'controls-with-desc',
+                                    text: 'Раздельных санузлов:',
+                                    modifier: 'lw-controls-with-desc--table-grid lw-mobile-column lw-align-center',
+
+                                    groups: [
+                                        [
+                                            {
+                                                type: 'text'
+                                            }
+                                        ],
+                                    ]
+                                },
+                            ],
+
+                            [
+                                {
+                                    type: 'controls-with-desc',
+                                    text: 'Совмещенных санузлов:',
+                                    modifier: 'lw-controls-with-desc--table-grid lw-mobile-column lw-align-center',
+
+                                    groups: [
+                                        [
+                                            {
+                                                type: 'text'
+                                            }
+                                        ],
+                                    ]
+                                },
+                            ],
+
+                            [
+                                {
+                                    type: 'controls-with-desc',
+                                    text: 'Кол-во балконов:',
+                                    modifier: 'lw-controls-with-desc--table-grid lw-mobile-column lw-align-center',
+
+                                    groups: [
+                                        [
+                                            {
+                                                type: 'text'
+                                            }
+                                        ],
+                                    ]
+                                },
+                            ],
+
+                            [
+                                {
+                                    type: 'controls-with-desc',
+                                    text: 'Кол-во лоджий:',
+                                    modifier: 'lw-controls-with-desc--table-grid lw-mobile-column lw-align-center',
+
+                                    groups: [
+                                        [
+                                            {
+                                                type: 'text'
+                                            }
+                                        ],
+                                    ]
+                                },
+                            ],
+
+                            [
+                                {
+                                    type: 'switcher',
+                                    title: 'Терраса',
+                                    id: 'osn_1'
+                                },
+                            ],
+
+                            [
+                                {
+                                    type: 'controls-with-desc',
+                                    text: 'Тип ремонта для сайта:',
+                                    modifier: 'lw-controls-with-desc--table-grid lw-mobile-column lw-align-center',
+
+                                    groups: [
+                                        [
+                                            {
+                                                type: 'select',
+                                                options: ['Не выбрано', '1', '2']
+                                            }
+                                        ],
+                                    ]
+                                },
+                            ],
+
+                            [
+                                {
+                                    type: 'controls-with-desc',
+                                    text: 'Тип ремонта для ЦИАН:',
+                                    modifier: 'lw-controls-with-desc--table-grid lw-mobile-column lw-align-center',
+
+                                    groups: [
+                                        [
+                                            {
+                                                type: 'select',
+                                                options: ['Не выбрано', '1', '2']
+                                            }
+                                        ],
+                                    ]
+                                },
+                            ],
+                        ]
+                    },
+                ],
+
+                controlGroups2: [
+                    {
+                        modifier: '',
+
+                        controlsGroup: [
+                            [
+                                {
+                                    type: 'controls-with-desc',
+                                    text: 'Тип дома:',
+                                    modifier: 'lw-controls-with-desc--table-grid lw-mobile-column lw-align-center',
+
+                                    groups: [
+                                        [
+                                            {
+                                                type: 'select',
+                                                options: ['Не выбрано', 'Панельный']
+                                            }
+                                        ],
+                                    ]
+                                },
+                            ],
+
+                            [
+                                {
+                                    type: 'controls-with-desc',
+                                    text: 'Этаж:',
+                                    modifier: 'lw-controls-with-desc--table-grid lw-mobile-column lw-align-center',
+
+                                    groups: [
+                                        [
+                                            {
+                                                type: 'text',
+                                                note: 'из',
+                                                secondField: true
+                                            }
+                                        ],
+                                    ]
+                                },
+                            ],
+
+                            [
+                                {
+                                    type: 'controls-with-desc',
+                                    text: 'Подъезд:',
+                                    modifier: 'lw-controls-with-desc--table-grid lw-mobile-column lw-align-center',
+
+                                    groups: [
+                                        [
+                                            {
+                                                type: 'text',
+                                                note: 'из',
+                                                secondField: true
+                                            }
+                                        ],
+                                    ]
+                                },
+                            ],
+
+                            [
+                                {
+                                    type: 'controls-with-desc',
+                                    text: 'Высота потолков:',
+                                    modifier: 'lw-controls-with-desc--table-grid lw-mobile-column lw-align-center',
+
+                                    groups: [
+                                        [
+                                            {
+                                                type: 'text',
+                                                note: 'м.'
+                                            }
+                                        ],
+                                    ]
+                                },
+                            ],
+
+                            [
+                                {
+                                    type: 'controls-with-desc',
+                                    text: 'Кол-во уровней:',
+                                    modifier: 'lw-controls-with-desc--table-grid lw-mobile-column lw-align-center',
+
+                                    groups: [
+                                        [
+                                            {
+                                                type: 'text'
+                                            }
+                                        ],
+                                    ]
+                                },
+                            ],
+
+                            [
+                                {
+                                    type: 'controls-with-desc',
+                                    text: 'Вид из окон:',
+                                    modifier: 'lw-controls-with-desc--table-grid lw-mobile-column lw-align-center',
+
+                                    groups: [
+                                        [
+                                            {
+                                                type: 'select',
+                                                options: ['Не выбрано', 'Двор', 'Забор']
+                                            }
+                                        ],
+                                    ]
+                                },
+                            ],
+
+                            [
+                                {
+                                    type: 'controls-with-desc',
+                                    text: 'Тип комнат:',
+                                    modifier: 'lw-controls-with-desc--table-grid lw-mobile-column lw-align-center',
+
+                                    groups: [
+                                        [
+                                            {
+                                                type: 'select',
+                                                options: ['Не выбрано', '1', '2']
+                                            }
+                                        ],
+                                    ]
+                                },
+                            ],
+
+                            [
+                                {
+                                    type: 'switcher',
+                                    title: 'Пентхаус',
+                                    id: 'osn_2'
+                                },
+                            ],
+
+                            [
+                                {
+                                    type: 'switcher',
+                                    title: 'Апартаменты',
+                                    id: 'osn_3'
+                                },
+                            ],
+
+                            [
+                                {
+                                    type: 'controls-with-desc',
+                                    text: 'Кол-во пассажирских лифтов',
+                                    modifier: 'lw-controls-with-desc--table-grid lw-mobile-column lw-align-center',
+
+                                    groups: [
+                                        [
+                                            {
+                                                type: 'select',
+                                                options: ['Не выбрано', '1', '2']
+                                            }
+                                        ],
+                                    ]
+                                },
+                            ],
+
+                            [
+                                {
+                                    type: 'controls-with-desc',
+                                    text: 'Кол-во грузовых лифтов',
+                                    modifier: 'lw-controls-with-desc--table-grid lw-mobile-column lw-align-center',
+
+                                    groups: [
+                                        [
+                                            {
+                                                type: 'select',
+                                                options: ['Не выбрано', '1', '2']
+                                            }
+                                        ],
+                                    ]
+                                },
+                            ],
+
+                            [
+                                {
+                                    type: 'switcher',
+                                    title: 'Персональный лифт',
+                                    id: 'osn_4'
+                                },
+                            ],
+
+                            [
+                                {
+                                    type: 'controls-with-desc',
+                                    text: 'Тип комнаты',
+                                    modifier: 'lw-controls-with-desc--bordered lw-controls-with-desc--scrollable lw-flex-column',
+
+                                    groups: [
+                                        [
+                                            {
+                                                type: 'select',
+                                                options: ['Не выбрано', 'Спальня', 'Гостинная']
+                                            },
+                                            {
+                                                type: 'text',
+                                                modifier: 'lw-text-control-xs',
+                                                note: 'кВ.м.'
+                                            },
+                                            {
+                                                type: 'button',
+                                                tag: 'button',
+                                                cls: 'lw-simple-btn',
+                                                icon: 'icon-close.svg',
+                                                iconWidth: 16,
+                                                conHeight: 16
+                                            }
+                                        ],
+
+                                        [
+                                            {
+                                                type: 'select',
+                                                options: ['Не выбрано', 'Спальня', 'Гостинная']
+                                            },
+                                            {
+                                                type: 'text',
+                                                modifier: 'lw-text-control-xs',
+                                                note: 'кВ.м.'
+                                            },
+                                            {
+                                                type: 'button',
+                                                tag: 'button',
+                                                cls: 'lw-simple-btn',
+                                                icon: 'icon-close.svg',
+                                                iconWidth: 16,
+                                                conHeight: 16
+                                            }
+                                        ],
+
+                                        [
+                                            {
+                                                type: 'select',
+                                                options: ['Не выбрано', 'Спальня', 'Гостинная']
+                                            },
+                                            {
+                                                type: 'text',
+                                                modifier: 'lw-text-control-xs',
+                                                note: 'кВ.м.'
+                                            },
+                                            {
+                                                type: 'button',
+                                                tag: 'button',
+                                                cls: 'lw-simple-btn',
+                                                icon: 'icon-close.svg',
+                                                iconWidth: 16,
+                                                conHeight: 16
+                                            }
+                                        ],
+
+                                        [
+                                            {
+                                                type: 'select',
+                                                options: ['Не выбрано', 'Спальня', 'Гостинная']
+                                            },
+                                            {
+                                                type: 'text',
+                                                modifier: 'lw-text-control-xs',
+                                                note: 'кВ.м.'
+                                            },
+                                            {
+                                                type: 'button',
+                                                tag: 'button',
+                                                cls: 'lw-simple-btn',
+                                                icon: 'icon-close.svg',
+                                                iconWidth: 16,
+                                                conHeight: 16
+                                            }
+                                        ],
+                                    ]
+                                },
+                            ],
+
+                            [
+
+                                        
+                                            {
+                                                type: 'button',
+                                                tag: 'button',
+                                                cls: 'lw-simple-btn lw-fixed-bottom',
+                                                icon: 'icon-plus-rounded.svg',
+                                                iconWidth: 16,
+                                                iconHeight: 16,
+                                                text: 'Добавить комнату'
+                                            }
+                                        
+                            ]
+                        ]
+                    },
+                ]
+            }
+        ]        
+    }
+
+-
+    const finansy = {
+        title: 'Финансы',
+
+        
+
+        sectionRows: [
+            {
+                cols: 1,
+                controlGroups: [
+                    {
+                        modifier: '',
+                        controlsGroup: [
+                            [
+                                {
+                                    type: 'controls-with-desc',
+                                    text: 'Цена за кв.м.:',
+                                    modifier: 'lw-controls-withdesc--table-grid lw-align-center lw-mobile-column',
+
+                                    groups: [
+                                        [
+                                            {
+                                                type: 'text',
+                                                note: '₽',
+                                                modifier: 'lw-text-control-md'
+                                            }
+                                        ],
+                                    ]
+                                }
                             ]
                         ]
                     }
-                ],
+                ]
+            },
 
+            {
+                cols: 1,
+                modifier: '',
                 controlGroups: [
                     {
-                        modifier: '',
+                        modifier: 'lw-items-row-gaped',
                         controlsGroup: [
                             [
+                                {
+                                    type: 'switcher',
+                                    title: 'КУ отдельно',
+                                    modifier: 'lw-width-fit-content',
+                                    id: 'fin_1'
+                                },
 
+                                {
+                                    type: 'text',
+                                    modifier: 'lw-text-control-md',
+                                    text: 'Стоимость КУ:',
+                                    note: '₽'
+                                }
+                            ],
+                        ]
+                    }
+                ]
+            },
+
+
+            {
+                cols: 1,
+                modifier: '',
+                controlGroups: [
+                    {
+                        
+                        controlsGroup: [
+                            [
+                                {
+                                    type: 'switcher',
+                                    title: 'Счётчики включены в цену',
+                                    id: 'fin_2'
+                                }
+                            ],
+                        ]
+                    }
+                ]
+            },
+
+            {
+                cols: 1,
+                modifier: '',
+                controlGroups: [
+                    {
+                        modifier: 'lw-items-row-gaped',
+                        controlsGroup: [
+                            [
+                                {
+                                    type: 'switcher',
+                                    title: 'Торг возможен',
+                                    modifier: 'lw-width-fit-content',
+                                    id: 'fin_3'
+                                },
+
+                                {
+                                    type: 'text',
+                                    modifier: 'lw-text-control-md',
+                                    text: 'Цена после торга:',
+                                    note: '₽'
+                                }
+                            ],
+                        ]
+                    }
+                ]
+            },
+
+            {
+                cols: 1,
+                controlGroups: [
+                    {
+                        
+                        controlsGroup: [
+                            [
+                                {
+                                    type: 'textarea',
+                                    label: 'Дополнительные затраты собственника:',
+                                    id: 'fin_text_1'
+                                }
+                            ]
+                        ]
+                    }
+                ]
+            },
+
+            {
+                cols: 1,
+                controlGroups: [
+                    {
+                        
+                        controlsGroup: [
+                            [
+                                {
+                                    type: 'textarea',
+                                    label: 'Дополнительные затраты арендатора:',
+                                    id: 'fin_text_2'
+                                }
                             ]
                         ]
                     }
@@ -885,6 +1904,9 @@
         razdel,
         tip,
         srok,
+        obekt,
+        finansy,
+        osnovnye,
         usloviya,
         udobstva,
         reklama,

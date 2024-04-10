@@ -1,14 +1,16 @@
 mixin lw-btn(data)
 
     if data.tag == 'button'
-        data.tag(type="button" class= data.cls ? data.cls : null)
+        button(type="button" class= data.cls ? data.cls : null)
             if data.icon
                 img(src=`../assets/img/${data.icon}` width= data.iconWidth height= data.iconHeight)
-            span!= data.text
+            if data.text
+                span!= data.text
     
     if data.tag == 'a'
         a(href= data.href class= data.cls ? data.cls : null)
             if data.icon
                 img(src=`../assets/img/${data.icon}` width= data.iconWidth height= data.iconHeight)
 
-            span!= data.text
+            if data.text
+                span!= data.text

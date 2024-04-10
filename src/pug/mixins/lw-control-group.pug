@@ -7,6 +7,7 @@ include lw-textarea
 include lw-logo
 include lw-select
 include lw-multiple
+include lw-simple-text
 
 mixin lw-control-group(ctrls, modifier = null)
     .lw-control-group(class = modifier ? modifier : null)
@@ -40,3 +41,6 @@ mixin lw-control-group(ctrls, modifier = null)
 
             if ctrl.type == 'multiple'
                 +lw-multiple(ctrl)
+            
+            if ctrl.type == 'simple-text'
+                +lw-simple-text(ctrl)

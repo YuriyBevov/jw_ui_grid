@@ -8,14 +8,27 @@
 }
 
 .lw-textarea {
-    resize: none;
+    display: flex;
+    flex-direction: column;
     width: 100%;
     max-width: var(--lw-textarea-max-width);
-    height: var(--lw-textarea-height);
 
-    border-radius: var(--lw-textarea-radius);
-    border: var(--lw-textarea-border);
+    &-title {
+        display: inline-block;
+        margin-bottom: 10px;
+        font-size: 14px;
+        color: #757575;
+    }
 
-    padding: var(--lw-textarea-inner-offset);
-    color: var(--lw-textarea-color);
+    textarea {
+        resize: none;
+        width: 100%;
+        height: var(--lw-textarea-height);
+
+        border-radius: var(--lw-textarea-radius);
+        border: var(--lw-textarea-border);
+
+        padding: var(--lw-textarea-inner-offset);
+        color: var(--lw-textarea-color);
+    }
 }

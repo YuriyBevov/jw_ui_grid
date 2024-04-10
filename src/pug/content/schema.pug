@@ -1,31 +1,41 @@
 -
-const section = {
-    title,
+    const usloviya = {
+        title: 'Условия проживания',
+        sectionRows: [
+            {
+                cols: 1,
 
-    controlRows: [
-        {
-            cols,
+                controlGroups: [
+                    {
+                        modifier: 'lw-control-group--2cols',
+                        controlsGroup: [
+                            [
+                                {
+                                    type: 'switcher',
+                                    title: 'Можно ли с детьми',
+                                    id: 'usloviya_1'
+                                },
+  
+                                {
+                                    type: 'controls-with-desc',
+                                    text: 'Комментарий по детям:',
+                                        modifier: 'lw-controls-with-desc--table-grid lw-mobile-column',
 
-            modifier?,
-            col1Modifier,
-            col2Modifier
-            controlGroups : [
-                {
-                    modifier,
-                    controlsGroup:[
-                        [
-                            {
-                                control
-                            }
+                                    groups: [
+                                        [
+                                            {
+                                                type: 'textarea',
+                                            }
+                                        ],
+                                    ]
+                                },
+                            ]
                         ]
-                    ]
-                }
-            ]
-
-            controlGroups2 : []
-        }
-    ]
-}
+                    }
+                ]
+            },
+        ]
+    }
 
 //- radio
 

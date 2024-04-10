@@ -3,4 +3,4 @@ mixin lw-select(data)
         .lw-select
             select.custom-select
                 each value in data.options
-                    option(value= value)!= value
+                    option(value= value)= value

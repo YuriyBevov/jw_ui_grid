@@ -5,8 +5,8 @@ mixin main-section(data)
         .lw-container.lw-section-container 
             span.lw-title= data.title 
 
-            if data.controlRows 
-                each row of data.controlRows
+            if data.sectionRows 
+                each row of data.sectionRows
                     if row.cols == 2
                         .lw-section-row(class= row.modifier ? row.modifier : null)
                             .lw-section-row-col(class= row.colModifier ? row.colModifier : null)
@@ -21,7 +21,7 @@ mixin main-section(data)
                                         +lw-control-group(ctrls, group.modifier ? group.modifier : null)
                    
                     else
-                        .lw-section-row(class= row.colModifier ? row.colModifier : null)
+                        .lw-section-row(class= row.modifier ? row.modifier : null)
                             each group of row.controlGroups
                                 each ctrls of group.controlsGroup
                                     +lw-control-group(ctrls, group.modifier ? group.modifier : null)

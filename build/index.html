@@ -38,8 +38,8 @@
                   </div>
                 </div>
                 <div class="lw-control-group lw-justify-end lw-no-offset">
-                  <data class="tag lw-simple-btn lw-simple-btn--success-color" type="button"><img src="../assets/img/icon-attach.svg" width="16" height="16"/><span>Другие объекты собственника</span>
-                  </data>
+                  <button class="lw-simple-btn lw-simple-btn--success-color" type="button"><img src="../assets/img/icon-attach.svg" width="16" height="16"/><span>Другие объекты собственника</span>
+                  </button>
                 </div>
               </div>
             </div>
@@ -98,6 +98,474 @@
           </div>
         </section>
         <section class="lw-section">
+          <div class="lw-container lw-section-container"> <span class="lw-title">Объект</span>
+            <div class="lw-section-row">
+              <div class="lw-control-group">
+                <div class="lw-controls-with-desc lw-controls-with-desc--table-grid lw-mobile-column"><span>ID:</span>
+                  <div class="lw-controls-wrapper">
+                    <div class="lw-control-group"><span class="lw-simple-text">12345678910</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="lw-section-row">
+              <div class="lw-control-group">
+                <div class="lw-controls-with-desc lw-controls-with-desc--table-grid lw-align-center lw-mobile-column"><span>Статус:</span>
+                  <div class="lw-controls-wrapper">
+                    <div class="lw-control-group">
+                      <div class="lw-select">
+                        <select class="custom-select">
+                          <option value="Свободна">Свободна</option>
+                          <option value="Сдается">Сдается</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="lw-section-row">
+              <div class="lw-control-group">
+                <div class="lw-controls-with-desc lw-controls-with-desc--table-grid lw-align-center lw-mobile-column"><span>Дата прозвона:</span>
+                  <div class="lw-controls-wrapper">
+                    <div class="lw-control-group"><span class="lw-simple-text">12/06/2023</span>
+                      <button class="lw-simple-btn" type="button"><img src="../assets/img/icon-text.svg" width="16" height="16"/>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="lw-section">
+          <div class="lw-container lw-section-container"> <span class="lw-title">Финансы</span>
+            <div class="lw-section-row">
+              <div class="lw-control-group">
+                <div class="lw-controls-with-desc lw-controls-withdesc--table-grid lw-align-center lw-mobile-column"><span>Цена за кв.м.:</span>
+                  <div class="lw-controls-wrapper">
+                    <div class="lw-control-group">
+                      <div class="lw-main-input-wrapper">
+                        <input class="lw-text-control-md" type="text"/><small>₽</small>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="lw-section-row">
+              <div class="lw-control-group lw-items-row-gaped">
+                <div class="lw-switcher lw-width-fit-content">
+                  <input type="checkbox" id="fin_1"/>
+                  <label for="fin_1"><span>КУ отдельно</span></label>
+                </div>
+                <div class="lw-main-input-wrapper"><span>Стоимость КУ:</span>
+                  <input class="lw-text-control-md" type="text"/><small>₽</small>
+                </div>
+              </div>
+            </div>
+            <div class="lw-section-row">
+              <div class="lw-control-group">
+                <div class="lw-switcher">
+                  <input type="checkbox" id="fin_2"/>
+                  <label for="fin_2"><span>Счётчики включены в цену</span></label>
+                </div>
+              </div>
+            </div>
+            <div class="lw-section-row">
+              <div class="lw-control-group lw-items-row-gaped">
+                <div class="lw-switcher lw-width-fit-content">
+                  <input type="checkbox" id="fin_3"/>
+                  <label for="fin_3"><span>Торг возможен</span></label>
+                </div>
+                <div class="lw-main-input-wrapper"><span>Цена после торга:</span>
+                  <input class="lw-text-control-md" type="text"/><small>₽</small>
+                </div>
+              </div>
+            </div>
+            <div class="lw-section-row">
+              <div class="lw-control-group">
+                <div class="lw-textarea">
+                  <label class="lw-textarea-title" for="fin_text_1">Дополнительные затраты собственника:</label>
+                  <textarea id="fin_text_1"></textarea>
+                </div>
+              </div>
+            </div>
+            <div class="lw-section-row">
+              <div class="lw-control-group">
+                <div class="lw-textarea">
+                  <label class="lw-textarea-title" for="fin_text_2">Дополнительные затраты арендатора:</label>
+                  <textarea id="fin_text_2"></textarea>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="lw-section">
+          <div class="lw-container lw-section-container"> <span class="lw-title">Основные параметры</span>
+            <div class="lw-section-row">
+              <div class="lw-section-row-col">
+                <div class="lw-control-group">
+                  <div class="lw-controls-with-desc lw-controls-with-desc--table-grid lw-mobile-column lw-align-center"><span>Общая площадь:</span>
+                    <div class="lw-controls-wrapper">
+                      <div class="lw-control-group">
+                        <div class="lw-main-input-wrapper">
+                          <input type="text"/><small>кв.м.</small>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="lw-control-group">
+                  <div class="lw-controls-with-desc lw-controls-with-desc--table-grid lw-mobile-column lw-align-center"><span>Жилая площадь:</span>
+                    <div class="lw-controls-wrapper">
+                      <div class="lw-control-group">
+                        <div class="lw-main-input-wrapper">
+                          <input type="text"/><small>кв.м.</small>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="lw-control-group">
+                  <div class="lw-controls-with-desc lw-controls-with-desc--table-grid lw-mobile-column lw-align-center"><span>Площадь кухни:</span>
+                    <div class="lw-controls-wrapper">
+                      <div class="lw-control-group">
+                        <div class="lw-main-input-wrapper">
+                          <input type="text"/><small>кв.м.</small>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="lw-control-group">
+                  <div class="lw-controls-with-desc lw-controls-with-desc--table-grid lw-mobile-column lw-align-center"><span>Кол-во комнат:</span>
+                    <div class="lw-controls-wrapper">
+                      <div class="lw-control-group">
+                        <div class="lw-main-input-wrapper">
+                          <input type="text"/>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="lw-control-group">
+                  <div class="lw-controls-with-desc lw-controls-with-desc--table-grid lw-mobile-column lw-align-center"><span>Кол-во спален:</span>
+                    <div class="lw-controls-wrapper">
+                      <div class="lw-control-group">
+                        <div class="lw-main-input-wrapper">
+                          <input type="text"/>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="lw-control-group">
+                  <div class="lw-controls-with-desc lw-controls-with-desc--table-grid lw-mobile-column lw-align-center"><span>Кухня:</span>
+                    <div class="lw-controls-wrapper">
+                      <div class="lw-control-group">
+                        <div class="lw-select">
+                          <select class="custom-select">
+                            <option value="Открытая">Открытая</option>
+                            <option value="Закрытая">Закрытая</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="lw-control-group">
+                  <div class="lw-controls-with-desc lw-controls-with-desc--table-grid lw-mobile-column lw-align-center"><span>Раздельных санузлов:</span>
+                    <div class="lw-controls-wrapper">
+                      <div class="lw-control-group">
+                        <div class="lw-main-input-wrapper">
+                          <input type="text"/>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="lw-control-group">
+                  <div class="lw-controls-with-desc lw-controls-with-desc--table-grid lw-mobile-column lw-align-center"><span>Совмещенных санузлов:</span>
+                    <div class="lw-controls-wrapper">
+                      <div class="lw-control-group">
+                        <div class="lw-main-input-wrapper">
+                          <input type="text"/>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="lw-control-group">
+                  <div class="lw-controls-with-desc lw-controls-with-desc--table-grid lw-mobile-column lw-align-center"><span>Кол-во балконов:</span>
+                    <div class="lw-controls-wrapper">
+                      <div class="lw-control-group">
+                        <div class="lw-main-input-wrapper">
+                          <input type="text"/>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="lw-control-group">
+                  <div class="lw-controls-with-desc lw-controls-with-desc--table-grid lw-mobile-column lw-align-center"><span>Кол-во лоджий:</span>
+                    <div class="lw-controls-wrapper">
+                      <div class="lw-control-group">
+                        <div class="lw-main-input-wrapper">
+                          <input type="text"/>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="lw-control-group">
+                  <div class="lw-switcher">
+                    <input type="checkbox" id="osn_1"/>
+                    <label for="osn_1"><span>Терраса</span></label>
+                  </div>
+                </div>
+                <div class="lw-control-group">
+                  <div class="lw-controls-with-desc lw-controls-with-desc--table-grid lw-mobile-column lw-align-center"><span>Тип ремонта для сайта:</span>
+                    <div class="lw-controls-wrapper">
+                      <div class="lw-control-group">
+                        <div class="lw-select">
+                          <select class="custom-select">
+                            <option value="Не выбрано">Не выбрано</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="lw-control-group">
+                  <div class="lw-controls-with-desc lw-controls-with-desc--table-grid lw-mobile-column lw-align-center"><span>Тип ремонта для ЦИАН:</span>
+                    <div class="lw-controls-wrapper">
+                      <div class="lw-control-group">
+                        <div class="lw-select">
+                          <select class="custom-select">
+                            <option value="Не выбрано">Не выбрано</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="lw-section-row-col">
+                <div class="lw-control-group">
+                  <div class="lw-controls-with-desc lw-controls-with-desc--table-grid lw-mobile-column lw-align-center"><span>Тип дома:</span>
+                    <div class="lw-controls-wrapper">
+                      <div class="lw-control-group">
+                        <div class="lw-select">
+                          <select class="custom-select">
+                            <option value="Не выбрано">Не выбрано</option>
+                            <option value="Панельный">Панельный</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="lw-control-group">
+                  <div class="lw-controls-with-desc lw-controls-with-desc--table-grid lw-mobile-column lw-align-center"><span>Этаж:</span>
+                    <div class="lw-controls-wrapper">
+                      <div class="lw-control-group">
+                        <div class="lw-main-input-wrapper">
+                          <input type="text"/><small>из</small>
+                          <input type="text"/>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="lw-control-group">
+                  <div class="lw-controls-with-desc lw-controls-with-desc--table-grid lw-mobile-column lw-align-center"><span>Подъезд:</span>
+                    <div class="lw-controls-wrapper">
+                      <div class="lw-control-group">
+                        <div class="lw-main-input-wrapper">
+                          <input type="text"/><small>из</small>
+                          <input type="text"/>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="lw-control-group">
+                  <div class="lw-controls-with-desc lw-controls-with-desc--table-grid lw-mobile-column lw-align-center"><span>Высота потолков:</span>
+                    <div class="lw-controls-wrapper">
+                      <div class="lw-control-group">
+                        <div class="lw-main-input-wrapper">
+                          <input type="text"/><small>м.</small>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="lw-control-group">
+                  <div class="lw-controls-with-desc lw-controls-with-desc--table-grid lw-mobile-column lw-align-center"><span>Кол-во уровней:</span>
+                    <div class="lw-controls-wrapper">
+                      <div class="lw-control-group">
+                        <div class="lw-main-input-wrapper">
+                          <input type="text"/>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="lw-control-group">
+                  <div class="lw-controls-with-desc lw-controls-with-desc--table-grid lw-mobile-column lw-align-center"><span>Вид из окон:</span>
+                    <div class="lw-controls-wrapper">
+                      <div class="lw-control-group">
+                        <div class="lw-select">
+                          <select class="custom-select">
+                            <option value="Не выбрано">Не выбрано</option>
+                            <option value="Двор">Двор</option>
+                            <option value="Забор">Забор</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="lw-control-group">
+                  <div class="lw-controls-with-desc lw-controls-with-desc--table-grid lw-mobile-column lw-align-center"><span>Тип комнат:</span>
+                    <div class="lw-controls-wrapper">
+                      <div class="lw-control-group">
+                        <div class="lw-select">
+                          <select class="custom-select">
+                            <option value="Не выбрано">Не выбрано</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="lw-control-group">
+                  <div class="lw-switcher">
+                    <input type="checkbox" id="osn_2"/>
+                    <label for="osn_2"><span>Пентхаус</span></label>
+                  </div>
+                </div>
+                <div class="lw-control-group">
+                  <div class="lw-switcher">
+                    <input type="checkbox" id="osn_3"/>
+                    <label for="osn_3"><span>Апартаменты</span></label>
+                  </div>
+                </div>
+                <div class="lw-control-group">
+                  <div class="lw-controls-with-desc lw-controls-with-desc--table-grid lw-mobile-column lw-align-center"><span>Кол-во пассажирских лифтов</span>
+                    <div class="lw-controls-wrapper">
+                      <div class="lw-control-group">
+                        <div class="lw-select">
+                          <select class="custom-select">
+                            <option value="Не выбрано">Не выбрано</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="lw-control-group">
+                  <div class="lw-controls-with-desc lw-controls-with-desc--table-grid lw-mobile-column lw-align-center"><span>Кол-во грузовых лифтов</span>
+                    <div class="lw-controls-wrapper">
+                      <div class="lw-control-group">
+                        <div class="lw-select">
+                          <select class="custom-select">
+                            <option value="Не выбрано">Не выбрано</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="lw-control-group">
+                  <div class="lw-switcher">
+                    <input type="checkbox" id="osn_4"/>
+                    <label for="osn_4"><span>Персональный лифт</span></label>
+                  </div>
+                </div>
+                <div class="lw-control-group">
+                  <div class="lw-controls-with-desc lw-controls-with-desc--bordered lw-controls-with-desc--scrollable lw-flex-column"><span>Тип комнаты</span>
+                    <div class="lw-controls-wrapper">
+                      <div class="lw-control-group">
+                        <div class="lw-select">
+                          <select class="custom-select">
+                            <option value="Не выбрано">Не выбрано</option>
+                            <option value="Спальня">Спальня</option>
+                            <option value="Гостинная">Гостинная</option>
+                          </select>
+                        </div>
+                        <div class="lw-main-input-wrapper">
+                          <input class="lw-text-control-xs" type="text"/><small>кВ.м.</small>
+                        </div>
+                        <button class="lw-simple-btn" type="button"><img src="../assets/img/icon-close.svg" width="16"/>
+                        </button>
+                      </div>
+                      <div class="lw-control-group">
+                        <div class="lw-select">
+                          <select class="custom-select">
+                            <option value="Не выбрано">Не выбрано</option>
+                            <option value="Спальня">Спальня</option>
+                            <option value="Гостинная">Гостинная</option>
+                          </select>
+                        </div>
+                        <div class="lw-main-input-wrapper">
+                          <input class="lw-text-control-xs" type="text"/><small>кВ.м.</small>
+                        </div>
+                        <button class="lw-simple-btn" type="button"><img src="../assets/img/icon-close.svg" width="16"/>
+                        </button>
+                      </div>
+                      <div class="lw-control-group">
+                        <div class="lw-select">
+                          <select class="custom-select">
+                            <option value="Не выбрано">Не выбрано</option>
+                            <option value="Спальня">Спальня</option>
+                            <option value="Гостинная">Гостинная</option>
+                          </select>
+                        </div>
+                        <div class="lw-main-input-wrapper">
+                          <input class="lw-text-control-xs" type="text"/><small>кВ.м.</small>
+                        </div>
+                        <button class="lw-simple-btn" type="button"><img src="../assets/img/icon-close.svg" width="16"/>
+                        </button>
+                      </div>
+                      <div class="lw-control-group">
+                        <div class="lw-select">
+                          <select class="custom-select">
+                            <option value="Не выбрано">Не выбрано</option>
+                            <option value="Спальня">Спальня</option>
+                            <option value="Гостинная">Гостинная</option>
+                          </select>
+                        </div>
+                        <div class="lw-main-input-wrapper">
+                          <input class="lw-text-control-xs" type="text"/><small>кВ.м.</small>
+                        </div>
+                        <button class="lw-simple-btn" type="button"><img src="../assets/img/icon-close.svg" width="16"/>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="lw-control-group">
+                  <button class="lw-simple-btn lw-fixed-bottom" type="button"><img src="../assets/img/icon-plus-rounded.svg" width="16" height="16"/><span>Добавить комнату</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="lw-section">
           <div class="lw-container lw-section-container"> <span class="lw-title">Условия проживания</span>
             <div class="lw-section-row">
               <div class="lw-control-group lw-control-group--2cols">
@@ -108,11 +576,15 @@
                 <div class="lw-controls-with-desc lw-controls-with-desc--table-grid lw-mobile-column"><span>Комментарий по детям:</span>
                   <div class="lw-controls-wrapper">
                     <div class="lw-control-group">
-                      <textarea class="lw-textarea"></textarea>
+                      <div class="lw-textarea">
+                        <textarea></textarea>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
+            </div>
+            <div class="lw-section-row">
               <div class="lw-control-group lw-control-group--2cols">
                 <div class="lw-switcher">
                   <input type="checkbox" id="usloviya_2"/>
@@ -121,11 +593,15 @@
                 <div class="lw-controls-with-desc lw-controls-with-desc--table-grid lw-mobile-column"><span>Комментарий по животным:</span>
                   <div class="lw-controls-wrapper">
                     <div class="lw-control-group">
-                      <textarea class="lw-textarea"></textarea>
+                      <div class="lw-textarea">
+                        <textarea></textarea>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
+            </div>
+            <div class="lw-section-row">
               <div class="lw-control-group lw-control-group--2cols">
                 <div class="lw-select">
                   <select class="custom-select">
@@ -136,11 +612,34 @@
                 <div class="lw-controls-with-desc lw-controls-with-desc--table-grid lw-mobile-column"><span>Комментарий по мебели:</span>
                   <div class="lw-controls-wrapper">
                     <div class="lw-control-group">
-                      <textarea class="lw-textarea"></textarea>
+                      <div class="lw-textarea">
+                        <textarea></textarea>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
+            </div>
+            <div class="lw-section-row">
+              <div class="lw-control-group lw-control-group--2cols">
+                <div class="lw-select">
+                  <select class="custom-select">
+                    <option value="Без мебели">Без мебели</option>
+                    <option value="С мебелью">С мебелью</option>
+                  </select>
+                </div>
+                <div class="lw-controls-with-desc lw-controls-with-desc--table-grid lw-mobile-column"><span>Комментарий по мебели:</span>
+                  <div class="lw-controls-wrapper">
+                    <div class="lw-control-group">
+                      <div class="lw-textarea">
+                        <textarea></textarea>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="lw-section-row">
               <div class="lw-control-group lw-control-group--2cols">
                 <div class="lw-multiple-row">
                   <div class="lw-control-group">
@@ -158,17 +657,23 @@
                 <div class="lw-controls-with-desc lw-controls-with-desc--table-grid lw-mobile-column"><span>Комментарий по паркингу:</span>
                   <div class="lw-controls-wrapper">
                     <div class="lw-control-group">
-                      <textarea class="lw-textarea"></textarea>
+                      <div class="lw-textarea">
+                        <textarea></textarea>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
+            </div>
+            <div class="lw-section-row">
               <div class="lw-control-group lw-control-group--2cols">
                 <div class="lw-switcher lw-full-width">
                   <input type="checkbox" id="usloviya_3"/>
                   <label for="usloviya_3"><span>Машиноместо включено в стоимость</span></label>
                 </div>
               </div>
+            </div>
+            <div class="lw-section-row">
               <div class="lw-control-group lw-control-group--2cols">
                 <div class="lw-controls-with-desc lw-controls-with-desc--table-grid lw-mobile-column lw-full-width"><span>Миграционый <br>учет:</span>
                   <div class="lw-controls-wrapper">
@@ -184,12 +689,16 @@
                   </div>
                 </div>
               </div>
+            </div>
+            <div class="lw-section-row">
               <div class="lw-control-group lw-control-group--2cols">
                 <div class="lw-switcher lw-full-width">
                   <input type="checkbox" id="usloviya_4"/>
                   <label for="usloviya_4"><span>Курение разрешено</span></label>
                 </div>
               </div>
+            </div>
+            <div class="lw-section-row">
               <div class="lw-control-group lw-control-group--2cols">
                 <div class="lw-switcher lw-full-width">
                   <input type="checkbox" id="usloviya_5"/>
@@ -340,16 +849,20 @@
         <section class="lw-section">
           <div class="lw-container lw-section-container"> <span class="lw-title">Реклама</span>
             <div class="lw-section-row">
-              <div class="lw-control-group lw-mobile-nooffset">
+              <div class="lw-control-group">
                 <div class="lw-controls-with-desc lw-controls-with-desc--table-grid lw-mobile-column"><span>Описание для площадок:</span>
                   <div class="lw-controls-wrapper">
                     <div class="lw-control-group">
-                      <textarea class="lw-textarea"></textarea>
+                      <div class="lw-textarea">
+                        <textarea></textarea>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="lw-control-group lw-mobile-nooffset">
+            </div>
+            <div class="lw-section-row">
+              <div class="lw-control-group">
                 <div class="lw-controls-with-desc lw-controls-with-desc--table-grid lw-mobile-column"><span>Заголовок объявления:</span>
                   <div class="lw-controls-wrapper">
                     <div class="lw-control-group">
@@ -360,40 +873,63 @@
                   </div>
                 </div>
               </div>
-              <div class="lw-control-group lw-mobile-nooffset">
+            </div>
+            <div class="lw-section-row">
+              <div class="lw-control-group">
                 <div class="lw-controls-with-desc lw-controls-with-desc--table-grid lw-mobile-column"><span>Смена id для площадок:</span>
                   <div class="lw-controls-wrapper">
-                    <div class="lw-control-group"><img class="lw-logo" src="../assets/img/avito-logo.png" alt="Avito" width="80" height="24"/>
+                    <div class="lw-control-group"><img class="lw-logo" src="../assets/img/avito-logo.png" alt="Avito" width="65" height="24"/>
                       <div class="lw-main-input-wrapper">
                         <input type="text"/>
                       </div>
-                      <data class="tag lw-main-btn" type="button"><span>Сменить id</span>
-                      </data>
+                      <button class="lw-main-btn" type="button"><span>Сменить id</span>
+                      </button>
                     </div>
-                    <div class="lw-control-group"><img class="lw-logo" src="../assets/img/cian-logo.png" alt="Cian" width="80" height="24"/>
+                    <div class="lw-control-group"><img class="lw-logo" src="../assets/img/cian-logo.png" alt="Cian" width="65" height="24"/>
                       <div class="lw-main-input-wrapper">
                         <input type="text"/>
                       </div>
-                      <data class="tag lw-main-btn" type="button"><span>Сменить id</span>
-                      </data>
+                      <button class="lw-main-btn" type="button"><span>Сменить id</span>
+                      </button>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="lw-control-group lw-mobile-nooffset">
+            </div>
+            <div class="lw-section-row">
+              <div class="lw-control-group">
                 <div class="lw-controls-with-desc lw-controls-with-desc--table-grid lw-mobile-column"><span>Описание для сайта:</span>
                   <div class="lw-controls-wrapper">
                     <div class="lw-control-group">
-                      <textarea class="lw-textarea"></textarea>
+                      <div class="lw-textarea">
+                        <textarea></textarea>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="lw-control-group lw-mobile-nooffset">
+            </div>
+            <div class="lw-section-row">
+              <div class="lw-control-group">
+                <div class="lw-controls-with-desc lw-controls-with-desc--table-grid lw-mobile-column"><span>Описание для сайта:</span>
+                  <div class="lw-controls-wrapper">
+                    <div class="lw-control-group">
+                      <div class="lw-textarea">
+                        <textarea></textarea>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="lw-section-row">
+              <div class="lw-control-group">
                 <div class="lw-controls-with-desc lw-controls-with-desc--table-grid lw-mobile-column"><span>Описание для сайта на англ.:</span>
                   <div class="lw-controls-wrapper">
                     <div class="lw-control-group">
-                      <textarea class="lw-textarea"></textarea>
+                      <div class="lw-textarea">
+                        <textarea></textarea>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -404,7 +940,7 @@
         <section class="lw-section">
           <div class="lw-container lw-section-container"> <span class="lw-title">Прочее</span>
             <div class="lw-section-row">
-              <div class="lw-control-group lw-mobile-nooffset">
+              <div class="lw-control-group">
                 <div class="lw-controls-with-desc lw-mobile-column"><span>Агент:</span>
                   <div class="lw-controls-wrapper">
                     <div class="lw-control-group"><a class="lw-simple-btn lw-simple-btn--info-color" href="#"><span>Константинов Константин Константинович</span></a>
@@ -412,6 +948,8 @@
                   </div>
                 </div>
               </div>
+            </div>
+            <div class="lw-section-row">
               <div class="lw-control-group lw-mobile-nooffset">
                 <div class="lw-controls-with-desc lw-mobile-column"><span>Кто нашел объект:</span>
                   <div class="lw-controls-wrapper">
@@ -420,6 +958,42 @@
                   </div>
                 </div>
               </div>
+            </div>
+            <div class="lw-section-row">
+              <div class="lw-control-group lw-mobile-nooffset">
+                <div class="lw-controls-with-desc lw-controls-with-desc--table-grid lw-align-center lw-mobile-column"><span>Источник:</span>
+                  <div class="lw-controls-wrapper">
+                    <div class="lw-control-group">
+                      <div class="lw-select">
+                        <select class="custom-select">
+                          <option value="Не выбрано">Не выбрано</option>
+                          <option value="Авито">Авито</option>
+                          <option value="Циан">Циан</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="lw-section-row">
+              <div class="lw-control-group lw-mobile-nooffset">
+                <div class="lw-controls-with-desc lw-controls-with-desc--table-grid lw-align-center lw-mobile-column"><span>Менеджер продажи:</span>
+                  <div class="lw-controls-wrapper">
+                    <div class="lw-control-group">
+                      <div class="lw-select">
+                        <select class="custom-select">
+                          <option value="Не выбрано">Не выбрано</option>
+                          <option value="1">1</option>
+                          <option value="2">2</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="lw-section-row">
               <div class="lw-control-group lw-mobile-nooffset">
                 <div class="lw-controls-with-desc lw-controls-with-desc--table-grid lw-align-center lw-mobile-column"><span>Цена продажи:</span>
                   <div class="lw-controls-wrapper">
@@ -431,6 +1005,8 @@
                   </div>
                 </div>
               </div>
+            </div>
+            <div class="lw-section-row">
               <div class="lw-control-group lw-mobile-nooffset">
                 <div class="lw-switcher">
                   <input type="checkbox" id="other_1"/>
@@ -441,20 +1017,28 @@
                   <label for="other_2"><span>Есть обременения</span></label>
                 </div>
               </div>
+            </div>
+            <div class="lw-section-row">
               <div class="lw-control-group lw-mobile-nooffset">
                 <div class="lw-controls-with-desc lw-controls-with-desc--table-grid lw-mobile-column"><span>Комментарий менеджера Intermark Property:</span>
                   <div class="lw-controls-wrapper">
                     <div class="lw-control-group">
-                      <textarea class="lw-textarea"></textarea>
+                      <div class="lw-textarea">
+                        <textarea></textarea>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="lw-control-group lw-mobile-nooffset">
+            </div>
+            <div class="lw-section-row">
+              <div class="lw-control-group">
                 <div class="lw-controls-with-desc lw-controls-with-desc--table-grid lw-mobile-column"><span>Внутренний комментарий Intermark Relocation:</span>
                   <div class="lw-controls-wrapper">
                     <div class="lw-control-group">
-                      <textarea class="lw-textarea"></textarea>
+                      <div class="lw-textarea">
+                        <textarea></textarea>
+                      </div>
                     </div>
                   </div>
                 </div>
