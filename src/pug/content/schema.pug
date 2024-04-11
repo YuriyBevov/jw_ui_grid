@@ -7,19 +7,13 @@
 
                 controlGroups: [
                     {
-                        modifier: 'lw-control-group--2cols',
+                        modifier: 'lw-mobile-nooffset',
                         controlsGroup: [
                             [
                                 {
-                                    type: 'switcher',
-                                    title: 'Можно ли с детьми',
-                                    id: 'usloviya_1'
-                                },
-  
-                                {
                                     type: 'controls-with-desc',
-                                    text: 'Комментарий по детям:',
-                                        modifier: 'lw-controls-with-desc--table-grid lw-mobile-column',
+                                    text: 'Комментарий менеджера Intermark Property:',
+                                    modifier: 'lw-controls-with-desc--table-grid lw-mobile-column',
 
                                     groups: [
                                         [
@@ -28,14 +22,42 @@
                                             }
                                         ],
                                     ]
-                                },
+                                }
                             ]
                         ]
-                    }
+                    },
                 ]
             },
         ]
     }
+
+
+    {
+        type: 'controls-with-desc',
+        text: 'Комментарий менеджера Intermark Property:',
+        modifier: 'lw-controls-with-desc--table-grid lw-mobile-column',
+
+        groups: [
+            [
+                
+            ],
+        ]
+    }
+
+
+
+    {
+        cols: 1,
+
+        controlGroups: [
+            {
+                controlsGroup: [ 
+                    [
+                    ]
+                ]
+            }
+        ]
+    },
 
 //- radio
 
