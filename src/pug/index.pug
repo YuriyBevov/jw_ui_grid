@@ -10,9 +10,12 @@ block variables
 block content
   include content/city-data
   
-  .lw-main-content
+  form(action="#").lw-main-content
     each item of cityData      
       +main-section(item)
+    
+    .lw-container
+      button(type="button").lw-main-btn.lw-submit-btn Сохранить
 
 block modals
 

@@ -1,6 +1,7 @@
 :root {
     --lw-simple-btn-success-color: #4caf50;
     --lw-simple-btn-info-color: #3a8efa;
+    --lw-simple-btn-light-color: #757575;
 
     --lw-simple-btn-font-size: 14px;
     --lw-simple-btn-font-weight: 400;
@@ -35,6 +36,15 @@
 
     &--info-color {
         color: var(--lw-simple-btn-info-color);
+
+        span {
+            padding-bottom: 2px;
+            text-decoration: underline;
+        }
+    }
+
+    &--light-color {
+        color: var(--lw-simple-btn-light-color);
 
         span {
             padding-bottom: 2px;

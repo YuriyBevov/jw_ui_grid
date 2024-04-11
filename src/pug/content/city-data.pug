@@ -1645,7 +1645,7 @@
                                 {
                                     type: 'controls-with-desc',
                                     text: 'Тип комнаты',
-                                    modifier: 'lw-controls-with-desc--bordered lw-controls-with-desc--scrollable lw-flex-column',
+                                    modifier: 'lw-controls-with-desc--bordered lw-flex-column',
 
                                     groups: [
                                         [
@@ -1753,12 +1753,344 @@
     }
 
 -
-    const finansy = {
-        title: 'Финансы',
-
-        
+    const locatcia = {
+        title: 'Локация',
 
         sectionRows: [
+            {
+                cols: 1,
+
+                controlGroups: [
+                    {
+                        controlsGroup: [
+                            [
+                                {
+                                    type: 'controls-with-desc', 
+                                    text: 'Страна:',
+                                    modifier: 'lw-controls-with-desc--table-grid lw-align-center lw-mobile-column',
+
+                                    groups: [
+                                        [
+                                            {
+                                                type: 'select',
+                                                options: ['Россия', 'Не Россия'],
+                                            }
+                                        ],
+                                    ]
+                                }
+                            ]
+                        ]
+                    }
+                    
+                ]
+            },
+
+            {
+                cols: 1,
+
+                controlGroups: [
+                    {
+                        controlsGroup: [
+                            [
+                                {
+                                    type: 'controls-with-desc', 
+                                    text: 'Название субъектра РФ (регион):',
+                                    modifier: 'lw-controls-with-desc--table-grid lw-align-center lw-mobile-column',
+
+                                    groups: [
+                                        [
+                                            {
+                                                type: 'select',
+                                                options: ['Московская область', 'Калининградская область'],
+                                            }
+                                        ],
+                                    ]
+                                }
+                            ]
+                        ]
+                    }
+                    
+                ]
+            },
+
+            {
+                cols: 1,
+
+                controlGroups: [
+                    {
+                        controlsGroup: [
+                            [
+                                {
+                                    type: 'controls-with-desc', 
+                                    text: 'Кадастровый номер:',
+                                    modifier: 'lw-controls-with-desc--table-grid lw-align-center lw-mobile-column',
+
+                                    groups: [
+                                        [
+                                            {
+                                                type: 'text',
+                                                note: '(необходимо для размещения на domclick.ru)'
+                                            }
+                                        ],
+                                    ]
+                                }
+                            ]
+                        ]
+                    }
+                    
+                ]
+            },
+
+            {
+                cols: 1,
+
+                controlGroups: [
+                    {
+                        controlsGroup: [
+                            [
+                                {
+                                    type: 'controls-with-desc', 
+                                    text: 'Юридический статус:',
+                                    modifier: 'lw-controls-with-desc--table-grid lw-align-center lw-mobile-column',
+
+                                    groups: [
+                                        [
+                                            {
+                                                type: 'text',
+                                                modifier: 'lw-text-control-md',
+                                                note: '(данная информация необходима для рекламы на ЦИАН и Авито)'
+                                            }
+                                        ],
+                                    ]
+                                }
+                            ]
+                        ]
+                    }
+                    
+                ]
+            },
+
+            {
+                cols: 1,
+
+                controlGroups: [
+                    {
+                        controlsGroup: [
+                            [
+                                {
+                                    type: 'controls-with-desc', 
+                                    text: 'Адрес',
+                                    modifier: 'lw-controls-with-desc--table-grid lw-mobile-column',
+
+                                    groups: [
+                                        [
+                                            {
+                                                type: 'text',
+                                                secondField: true,
+                                                note: '№:&nbsp;кв.'
+                                            },
+                                        ],
+
+                                        [
+                                            {
+                                                type: 'button',
+                                                tag: 'button',
+                                                text: 'Редактировать адрес',
+                                                cls: 'lw-simple-btn lw-simple-btn--success-color',
+                                            },
+                                        ],
+                                        [
+
+                                            {
+                                                type: 'button',
+                                                tag: 'button',
+                                                text: 'Уточнить координаты на карте',
+                                                cls: 'lw-simple-btn lw-simple-btn--light-color', 
+                                            },
+                                        ]
+                                    ]
+                                }
+                            ]
+                        ]
+                    }
+                    
+                ]
+            },
+
+            {
+                cols: 1,
+
+                controlGroups: [
+                    {
+                        controlsGroup: [
+                            [
+                                {
+                                    type: 'controls-with-desc', 
+                                    text: 'Метро:',
+                                    modifier: 'lw-controls-with-desc--table-grid lw-mobile-column',
+
+                                    groups: [
+                                        [
+                                            {
+                                                type: 'select',
+                                                options: ['Баррикадная', 'Крестьянская забава']
+                                            },
+                                        ],
+
+                                        [
+
+                                            {
+                                                type: 'text',
+                                                modifier: 'lw-text-control-xs',
+                                                text: 'До метро:',
+                                                note: 'минут'
+                                            },
+
+                                            {
+                                                type: 'select',
+                                                options: ['пешком', 'на велосипеде']
+                                            }
+                                        ],
+
+                                        
+                                        [
+                                            {
+                                                type: 'select',
+                                                options: ['Баррикадная', 'Крестьянская забава']
+                                            }
+
+                                        ],
+
+                                        [
+                                            {
+                                                type: 'text',
+                                                modifier: 'lw-text-control-xs',
+                                                text: 'До метро:',
+                                                note: 'минут'
+                                            },
+
+                                            {
+                                                type: 'select',
+                                                options: ['пешком', 'на велосипеде']
+                                            }
+
+                                        ],
+
+                                        [
+                                            {
+                                                type: 'button',
+                                                tag: 'button',
+                                                text: 'Добавить станцию метро',
+                                                cls: 'lw-simple-btn',
+                                                icon: 'icon-plus-rounded.svg',
+                                                iconWidth: '16',
+                                                iconHeight: '16'
+                                            }
+                                        ]
+                                    ]
+                                }
+                            ]
+                        ]
+                    }
+                    
+                ]
+            },
+
+            {
+                cols: 1,
+
+                controlGroups: [
+                    {
+                        controlsGroup: [
+                            [
+                                {
+                                    type: 'controls-with-desc', 
+                                    text: 'Район для аналитики:',
+                                    modifier: 'lw-controls-with-desc--table-grid lw-align-center lw-mobile-column',
+
+                                    groups: [
+                                        [
+                                            {
+                                                type: 'select',
+                                                options: ['Патриаршие пруды', 'Калининградская область'],
+                                            }
+                                        ],
+                                    ]
+                                }
+                            ]
+                        ]
+                    }
+                    
+                ]
+            },
+
+
+            {
+                cols: 1,
+
+                controlGroups: [
+                    {
+                        controlsGroup: [
+                            [
+                                {
+                                    type: 'controls-with-desc', 
+                                    text: 'Схема проезда к объекту:',
+                                    modifier: 'lw-controls-with-desc--table-grid lw-align-center lw-mobile-column',
+
+                                    groups: [
+                                        [
+                                            {
+                                                type: 'textarea',
+                                            }
+                                        ],
+                                    ]
+                                }
+                            ]
+                        ]
+                    }
+                    
+                ]
+            },
+        ]    
+    }
+
+-
+    const finansy = {
+        title: 'Финансы',       
+
+        sectionRows: [
+            {
+                cols: 1,
+                controlGroups: [
+                    {
+                        controlsGroup: [
+                            [
+                                {
+                                    type: 'controls-with-desc', 
+                                    text: 'Цена:',
+                                    modifier: 'lw-width-fit-content lw-align-center lw-mobile-column',
+
+                                    groups: [
+                                        [
+                                            {
+                                                type: 'text',
+                                                note: '₽',
+                                                modifier: 'lw-text-control-md'
+                                            },
+
+                                            {
+                                                type: 'select',
+                                                options: ['RUB', 'EUR'],
+                                            }
+                                        ],
+                                    ]
+                                }
+                            ]
+                        ]
+                    }
+                ]
+            },
+
             {
                 cols: 1,
                 controlGroups: [
@@ -1865,6 +2197,216 @@
                 cols: 1,
                 controlGroups: [
                     {
+                        controlsGroup: [
+                            [
+                                {
+                                    type: 'controls-with-desc', 
+                                    text: 'Предоплата:',
+                                    modifier: 'lw-width-fit-content lw-align-center lw-mobile-column',
+
+                                    groups: [
+                                        [
+                                            {
+                                                type: 'text',
+                                                note: '₽',
+                                                modifier: 'lw-text-control-md'
+                                            },
+
+                                            {
+                                                type: 'select',
+                                                text: 'за',
+                                                note: 'мес.',
+                                                
+                                                options: ['1', '2', '3', '12'],
+                                            }
+                                        ],
+                                    ]
+                                }
+                            ]
+                        ]
+                    }
+                ]
+            },
+
+            {
+                cols: 1,
+
+                controlGroups: [
+                    {
+                        controlsGroup: [ 
+                            [
+                                {
+                                    type: 'controls-with-desc', 
+                                    text: 'Депозит:',
+                                    modifier: 'lw-width-fit-content lw-align-center lw-mobile-column',
+
+                                    groups: [
+                                        [
+                                            {
+                                                type: 'select',
+                                                note: '(Avito&nbsp;и&nbsp;Domofond)',
+                                                
+                                                options: ['Не выбрано', '1', '2'],
+                                            }
+                                        ],
+                                    ]
+                                }
+                            ]
+                        ]
+                    }
+                ]
+            },
+
+            {
+                cols: 1,
+
+                controlGroups: [
+                    {
+                        controlsGroup: [ 
+                            [
+                                {
+                                    type: 'controls-with-desc',
+                                    text: 'Депозит:',
+                                    modifier: 'lw-width-fit-content lw-align-center lw-mobile-column',
+
+                                    groups: [
+                                        [
+                                            {
+                                            type: 'text',
+                                            note: 'руб.&nbsp;(ЦИАН)'
+                                            }
+                                        ],
+                                    ]
+                                }
+                            ]
+                        ]
+                    }
+                ]
+            },
+
+            {
+                cols: 1,
+
+                controlGroups: [
+                    {
+                        controlsGroup: [ 
+                            [
+                                {
+                                    type: 'controls-with-desc',
+                                    text: 'Минимальный срок аренды:',
+                                    modifier: 'lw-width-fit-content lw-align-center lw-mobile-column',
+
+                                    groups: [
+                                        [
+                                            {
+                                                type: 'select',
+                                                options: ['1', '2', '12'],
+                                                note: 'мес.'
+                                            }
+                                        ],
+                                    ]
+                                }
+                            ]
+                        ]
+                    }
+                ]
+            },
+
+            {
+                cols: 1,
+
+                controlGroups: [
+                    {
+                        controlsGroup: [ 
+                            [
+                                {
+                                    type: 'text',
+                                    modifier: 'lw-text-control-md',
+                                    note: '% с собственника'
+                                }
+                            ]
+                        ]
+                    }
+                ]
+            },
+
+
+            {
+                cols: 1,
+
+                controlGroups: [
+                    {
+                        controlsGroup: [ 
+                            [
+                                {
+                                    type: 'switcher',
+                                    title: 'Собственник платит',
+                                    id: 'fin_sw_1'
+                                }
+                            ]
+                        ]
+                    }
+                ]
+            },
+
+            {
+                cols: 1,
+
+                controlGroups: [
+                    {
+                        controlsGroup: [ 
+                            [
+                                {
+                                    type: 'text',
+                                    modifier: 'lw-text-control-md',
+                                    note: '% с агента'
+                                }
+                            ]
+                        ]
+                    }
+                ]
+            },
+
+            {
+                cols: 1,
+
+                controlGroups: [
+                    {
+                        controlsGroup: [ 
+                            [
+                                {
+                                    type: 'text',
+                                    modifier: 'lw-text-control-md',
+                                    note: '% с арендатора'
+                                }
+                            ]
+                        ]
+                    }
+                ]
+            },
+
+            {
+                cols: 1,
+
+                controlGroups: [
+                    {
+                        controlsGroup: [ 
+                            [
+                                {
+                                    type: 'text',
+                                    modifier: 'lw-text-control-md',
+                                    note: '% бонус агенту'
+                                }
+                            ]
+                        ]
+                    }
+                ]
+            },
+
+            {
+                cols: 1,
+                controlGroups: [
+                    {
                         
                         controlsGroup: [
                             [
@@ -1899,16 +2441,218 @@
         ]
     }
 
+-
+    const photo = {
+        title: 'Фотографии для рекламы',
+
+        sectionRows: [
+            {
+                cols: 1,
+                controlGroups: [
+                    {
+                        controlsGroup: [
+                            [
+                                {
+                                    type: 'switcher',
+                                    title: 'Добавлять водяной знак на фотографии при загрузке фотографий',
+                                    id: 'photo_1'
+                                },
+                                {
+                                    type: 'media',
+
+                                    photos: [
+                                        {
+                                            img: 'gallery-item.png',
+                                            isCover: true,
+                                        },
+                                        {
+                                            img: 'gallery-item.png',
+                                        },
+                                        {
+                                            img: 'gallery-item.png',
+                                        },
+                                        {
+                                            img: 'gallery-item.png',
+                                        },
+                                    ]
+                                }
+                            ],
+                        ]
+                    }
+                ]
+            },
+
+            {
+                cols: 1,
+                title: 'Фотографии',
+                titleNote: ' (данная информация необходима для рекламы на бесплатных площадках, минимум 4 фотографии)',
+                controlGroups: [
+                    {
+                        controlsGroup: [
+                            [
+                                {
+                                    type: 'switcher',
+                                    title: 'Выбрать все фотографии для рекламы',
+                                    id: 'photo_2'
+                                },
+                                {
+                             
+                                    type: 'media',
+
+                                    photos: [
+                                        {
+                                            img: 'gallery-item.png',
+                                            isCover: true,
+                                            isChecker: true,
+                                            isChecked: true,
+                                            id: 'media_1'
+                                        },
+                                        {
+                                            img: 'gallery-item.png',
+                                            isChecker: true,
+                                            id: 'media_2'
+                                        },
+                                        {
+                                            img: 'gallery-item.png',
+                                            isChecker: true,
+                                            id: 'media_3'
+                                        },
+                                        {
+                                            img: 'gallery-item.png',
+                                            isChecker: true,
+                                            id: 'media_4'
+                                        },
+                                    ]
+                                }
+                            ],
+                        ]
+                    }
+                ]
+            },
+
+            {
+                cols: 1,
+                title: 'Планировка',
+                titleNote: ' (данная информация необходима для формирования PDF-презентации)',
+                controlGroups: [
+                    {
+                        controlsGroup: [
+                            [
+                                {
+                                    type: 'media',
+                                }
+                            ],
+                        ]
+                    }
+                ]
+            },
+        ]
+    }
+
+- 
+    const dop = {
+        title: 'Дополнительные поля',
+    }
+
+- 
+    const docs = {
+        title: 'Для документов',
+
+        sectionRows: [
+            {
+                cols: 1,
+                controlGroups: [
+                    {
+                        controlsGroup: [
+                            [
+                                {
+                                    type: 'button',
+                                    tag: 'button',
+                                    text: 'Добавить переменную',
+                                    cls: 'lw-simple-btn',
+                                    icon: 'icon-plus.svg',
+                                    iconWidth: '16',
+                                    iconHeght: '16px',
+                                }
+                            ]
+                        ]
+                    }
+                ]
+            },
+            {
+                cols: 1,
+                controlGroups: [
+                    {
+                        controlsGroup: [
+                            [
+                                {
+                                    type: 'note',
+                                    text: 'Добавляйте поля(переменные) интерактивных документов для автоматического заполнения бланков, договоров, соглашений и т.п. Такие документы можно отправлятьпо эл.почте Вашему клиенту или просто вывести на печать.'
+                                }
+                            ]
+                        ]
+                    }
+                ]
+            },
+        ]
+    }
+
+- 
+    const doski = {
+        title: 'Доски объявлений',
+
+        sectionRows: [
+            {
+                cols: 1,
+                controlGroups: [
+                    {
+                        controlsGroup: [
+                            [
+                                {
+                                    type: 'switcher',
+                                    title: 'В рекламу',
+                                    id: "dosli_1"
+                                }
+                            ]
+                        ]
+                    }
+                ]
+            },
+
+            {
+                cols: 1,
+                controlGroups: [
+                    {
+                        controlsGroup: [
+                            [
+                                {
+                                    type: 'note',
+                                    text: 'При включенном переключателе ваш объект попадает в раздел Реклама, откуда ответственный специалист сделает выгрузку на сторонние источники.'
+                                }
+                            ]
+                        ]
+                    }
+                ]
+            },
+        ]
+    }
+
 - 
     const cityData = [
         razdel,
         tip,
         srok,
         obekt,
+        locatcia,
         finansy,
         osnovnye,
         usloviya,
         udobstva,
         reklama,
-        prochee
+        prochee,
+        photo,
+        dop,
+        docs,
+        doski
+
     ]

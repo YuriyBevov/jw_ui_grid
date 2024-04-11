@@ -1,7 +1,7 @@
 mixin lw-main-input(data)
     .lw-main-input-wrapper
         if data.text
-            span!= data.text 
+            small!= data.text 
         input(class= data.modifier ? data.modifier : null type="text" placeholder= data.placeholder ? data.placeholder : null)
         if data.note
             small!= data.note

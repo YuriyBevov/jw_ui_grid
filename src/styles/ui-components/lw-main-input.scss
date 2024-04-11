@@ -13,16 +13,34 @@
 
 .lw-main-input-wrapper {
     display: flex;
+    
     align-items: center;
     flex-grow: 1;
     gap: 10px;
+
+    // @media(max-width: 374px) {
+    //     flex-direction: column;
+    //     align-items: flex-start;
+    // }
 
     small,
     span {
         font-size: 14px;
         font-weight: 400;
         color: var(--lw-main-input-text-color);
+        // white-space: nowrap;
+
+        @media(max-width: 534px) {
+            font-size: 12px;
+        }
     }
+
+    @media(max-width: 534px) {
+        flex-wrap: wrap;
+    small:last-child {
+        // width: 100%;
+    }
+}
 
     input {
         width: 100%;
