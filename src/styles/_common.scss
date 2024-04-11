@@ -226,6 +226,10 @@
       flex-grow: initial;
     }
 
+    .lw-controls-with-desc {
+      width: fit-content !important;
+    }
+
     @media(max-width: 960px) {
       justify-content: initial;
     }

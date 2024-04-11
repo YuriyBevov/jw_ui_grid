@@ -827,6 +827,11 @@ a {
   -ms-flex-positive: initial;
   flex-grow: initial;
 }
+.lw-justify-end .lw-controls-with-desc {
+  width: -webkit-fit-content !important;
+  width: -moz-fit-content !important;
+  width: fit-content !important;
+}
 @media (max-width: 960px) {
   .lw-justify-end {
     -webkit-box-pack: initial;
