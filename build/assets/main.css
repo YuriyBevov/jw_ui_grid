@@ -1035,12 +1035,14 @@ a {
 }
 .lw-main-btn--media {
   width: 100%;
-  max-width: 100px;
   height: 100%;
   background: -webkit-gradient(linear, left top, left bottom, from(#fefefe), to(#f6f6f6));
   background: linear-gradient(180deg, #fefefe 0%, #f6f6f6 100%);
   border: 1px dashed #dedede;
   border-radius: 3px;
+}
+.lw-main-btn--media img {
+  max-width: 50px;
 }
 
 :root {
@@ -1335,6 +1337,7 @@ a {
   position: relative;
   border-radius: 6px;
   overflow: hidden;
+  aspect-ratio: 1/1;
 }
 .lw-media__grid-item input {
   display: none;
