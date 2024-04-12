@@ -20,6 +20,44 @@ if (items) {
 
 /***/ }),
 
+/***/ "./src/scripts/modules/lw-checkbox-group-selecter.js":
+/*!***********************************************************!*\
+  !*** ./src/scripts/modules/lw-checkbox-group-selecter.js ***!
+  \***********************************************************/
+/***/ (() => {
+
+document.addEventListener("DOMContentLoaded", function () {
+  const selecters = document.querySelectorAll(".lw-checkbox-group-head-control input");
+  if (!selecters.length) return;
+  selecters.forEach(selecter => {
+    if (!selecter) return;
+    const onClickToggleCheckboxes = evt => {
+      const target = evt.target;
+      const group = target.closest('.lw-checkbox-group__header').nextElementSibling;
+      group.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
+        if (target.checked) {
+          checkbox.checked = true;
+          const checkboxes = group.querySelectorAll('input[type="checkbox"]');
+          const onClickChangeMainCheckboxState = () => {
+            target.checked = false;
+            checkboxes.forEach(checkbox => {
+              checkbox.removeEventListener('change', onClickChangeMainCheckboxState);
+            });
+          };
+          checkboxes.forEach(checkbox => {
+            checkbox.addEventListener('change', onClickChangeMainCheckboxState);
+          });
+        } else {
+          checkbox.checked = false;
+        }
+      });
+    };
+    selecter.addEventListener('change', onClickToggleCheckboxes);
+  });
+});
+
+/***/ }),
+
 /***/ "./src/scripts/modules/lw-multiple-checker.js":
 /*!****************************************************!*\
   !*** ./src/scripts/modules/lw-multiple-checker.js ***!
@@ -856,6 +894,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_custom_select__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/custom-select */ "./src/scripts/modules/custom-select.js");
 /* harmony import */ var _modules_lw_multiple_checker__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/lw-multiple-checker */ "./src/scripts/modules/lw-multiple-checker.js");
 /* harmony import */ var _modules_lw_multiple_checker__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_modules_lw_multiple_checker__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _modules_lw_checkbox_group_selecter__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/lw-checkbox-group-selecter */ "./src/scripts/modules/lw-checkbox-group-selecter.js");
+/* harmony import */ var _modules_lw_checkbox_group_selecter__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_modules_lw_checkbox_group_selecter__WEBPACK_IMPORTED_MODULE_2__);
+
 
 
 })();

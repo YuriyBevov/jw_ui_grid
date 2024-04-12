@@ -1532,6 +1532,55 @@ a {
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
 
+.lw-main-checkbox {
+  min-height: 22px;
+}
+.lw-main-checkbox input[type=checkbox] {
+  display: none;
+}
+.lw-main-checkbox label {
+  display: block;
+  position: relative;
+  padding-left: 30px;
+  font-size: 14px;
+  font-weight: 400;
+  color: #757575;
+  cursor: pointer;
+}
+.lw-main-checkbox label::before {
+  position: absolute;
+  top: -2px;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  content: "";
+  background-color: #ffffff;
+  border: 1px solid #dedede;
+  border-radius: 3px;
+  background-color: #ffffff;
+}
+.lw-main-checkbox input[type=checkbox]:checked + label::before {
+  background-color: #4caf50;
+  border-color: transparent;
+  background-image: url("../assets/img/icon-check.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.lw-checkbox-group {
+  width: 100%;
+  max-width: 1000px;
+}
+.lw-checkbox-group__header {
+  margin-bottom: 15px;
+}
+.lw-checkbox-group .lw-control-group {
+  display: -ms-grid;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 10px 20px;
+}
+
 /* Секции */
 /* Модальные окна */
 /*# sourceMappingURL=main.css.map */

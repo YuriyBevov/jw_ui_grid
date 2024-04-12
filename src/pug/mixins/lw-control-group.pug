@@ -11,6 +11,8 @@ include lw-simple-text
 include lw-media
 include lw-note
 include lw-multiple-checker
+include lw-checkbox
+include lw-checkbox-group
 
 mixin lw-control-group(ctrls, modifier = null)
     .lw-control-group(class = modifier ? modifier : null)
@@ -56,3 +58,9 @@ mixin lw-control-group(ctrls, modifier = null)
 
             if ctrl.type == 'multiple-checker'
                 +lw-multiple-checker(ctrl)
+
+            if ctrl.type == 'checkbox'
+                +lw-checkbox(ctrl)
+
+            if ctrl.type == 'checkbox-group'
+                +lw-checkbox-group(ctrl)
