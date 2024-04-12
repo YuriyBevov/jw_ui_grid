@@ -44,7 +44,7 @@
       margin-bottom: var(--main-offset-bottom);
     }
 
-    
+
 
     &-col {
       width: calc(50% - 30px);
@@ -78,7 +78,7 @@
     &--2cols {
       align-items: flex-start;
       gap: 10px 60px;
-      
+
       textarea {
         height: 60px;
       }
@@ -137,7 +137,7 @@
     display: flex;
     gap: 10px 20px;
     width: 100%;
-    
+
 
     & > span {
       font-size: 14px;
@@ -168,7 +168,7 @@
         height: 100%;
         max-height: 134px;
         overflow: hidden;
-        overflow-y: scroll;
+        overflow-y: auto;
       }
 
       & .lw-control-group:not(:last-child) {
@@ -263,7 +263,7 @@
     min-width: 180px
   }
 
-  &-items-nooffset > * { 
+  &-items-nooffset > * {
     margin-bottom: 0 !important
   }
 
@@ -281,13 +281,13 @@
       align-items: flex-start;
       width: 100%;
 
-      
+
 
       &.lw-controls-with-desc--table-grid span {
         max-width: 100%;
       }
     }
- 
+
     &-mobile-nooffset {
       margin-bottom: 0 !important;
     }

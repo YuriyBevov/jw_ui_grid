@@ -1,6 +1,100 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./src/scripts/modules/custom-select.js":
+/*!**********************************************!*\
+  !*** ./src/scripts/modules/custom-select.js ***!
+  \**********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var custom_select__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! custom-select */ "./node_modules/custom-select/build/index.js");
+
+const items = document.querySelectorAll('.custom-select');
+if (items) {
+  items.forEach(item => {
+    (0,custom_select__WEBPACK_IMPORTED_MODULE_0__["default"])(item);
+  });
+}
+
+/***/ }),
+
+/***/ "./src/scripts/modules/lw-multiple-checker.js":
+/*!****************************************************!*\
+  !*** ./src/scripts/modules/lw-multiple-checker.js ***!
+  \****************************************************/
+/***/ (() => {
+
+document.addEventListener("DOMContentLoaded", function () {
+  const items = document.querySelectorAll(".lw-multiple-checker");
+  if (!items.length) return;
+  const openers = document.querySelectorAll(".lw-multiple-checker-panel");
+  let activePanel = null;
+  const closeAllPanels = () => {
+    openers.forEach(opener => {
+      opener.classList.contains('is-open') ? opener.classList.remove('is-open') : null;
+    });
+  };
+  const onClickSetActivePanel = evt => {
+    if (activePanel === null) activePanel = evt.target;
+    if (evt.target.classList.contains('lw-multiple-checker-panel')) {
+      if (activePanel !== evt.target) {
+        closeAllPanels();
+        activePanel = evt.target;
+      }
+      activePanel.classList.toggle("is-open");
+    }
+  };
+  openers.forEach(opener => {
+    opener.addEventListener("click", onClickSetActivePanel);
+  });
+  let labels = document.querySelectorAll(".lw-multiple-checker label");
+  const addLabelToPanel = (target, container) => {
+    const panel = container.parentNode.querySelector('.lw-multiple-checker-panel.is-open');
+    const control = container.querySelector(`input[id="${target.getAttribute('for')}"]`);
+    if (!control.checked) {
+      const label = document.createElement("label");
+      label.setAttribute('for', target.getAttribute('for'));
+      label.innerHTML = target.innerHTML;
+      activePanel.appendChild(label);
+      label.addEventListener('click', onClickFillLabel);
+    } else {
+      removeLabelFromPanel(target, panel);
+    }
+  };
+  removeLabelFromPanel = (target, panel) => {
+    setTimeout(() => {
+      const elem = panel.querySelector(`label[for="${target.getAttribute('for')}"]`);
+      panel.removeChild(elem);
+    }, 0);
+  };
+  const onClickFillLabel = evt => {
+    const parent = evt.currentTarget.parentNode;
+    if (parent.classList.contains('lw-multiple-checker-container')) {
+      addLabelToPanel(evt.currentTarget, parent);
+    }
+    if (parent.classList.contains('lw-multiple-checker-panel')) {
+      removeLabelFromPanel(evt.currentTarget, parent);
+    }
+  };
+  labels.forEach(label => {
+    label.addEventListener('click', onClickFillLabel);
+  });
+  const onOverlayClickClosePanels = evt => {
+    if (activePanel && activePanel.classList.contains('is-open')) {
+      const activeContainer = activePanel.nextElementSibling;
+      if (!activePanel.contains(evt.target) && !activeContainer.contains(evt.target)) {
+        closeAllPanels();
+        activePanel = null;
+      }
+    }
+  };
+  document.addEventListener('click', onOverlayClickClosePanels, true);
+});
+
+/***/ }),
+
 /***/ "./node_modules/custom-event-polyfill/custom-event-polyfill.js":
 /*!*********************************************************************!*\
   !*** ./node_modules/custom-event-polyfill/custom-event-polyfill.js ***!
@@ -710,6 +804,35 @@ function customSelect(element, customParams) {
 /******/ 	}
 /******/ 	
 /************************************************************************/
+/******/ 	/* webpack/runtime/compat get default export */
+/******/ 	(() => {
+/******/ 		// getDefaultExport function for compatibility with non-harmony modules
+/******/ 		__webpack_require__.n = (module) => {
+/******/ 			var getter = module && module.__esModule ?
+/******/ 				() => (module['default']) :
+/******/ 				() => (module);
+/******/ 			__webpack_require__.d(getter, { a: getter });
+/******/ 			return getter;
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/define property getters */
+/******/ 	(() => {
+/******/ 		// define getter functions for harmony exports
+/******/ 		__webpack_require__.d = (exports, definition) => {
+/******/ 			for(var key in definition) {
+/******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
+/******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
+/******/ 				}
+/******/ 			}
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/hasOwnProperty shorthand */
+/******/ 	(() => {
+/******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
+/******/ 	})();
+/******/ 	
 /******/ 	/* webpack/runtime/make namespace object */
 /******/ 	(() => {
 /******/ 		// define __esModule on exports
@@ -726,30 +849,14 @@ var __webpack_exports__ = {};
 // This entry need to be wrapped in an IIFE because it need to be in strict mode.
 (() => {
 "use strict";
-var __webpack_exports__ = {};
-/*!**************************************!*\
-  !*** ./src/scripts/custom-select.js ***!
-  \**************************************/
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var custom_select__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! custom-select */ "./node_modules/custom-select/build/index.js");
-
-const items = document.querySelectorAll('.custom-select');
-if (items) {
-  items.forEach(item => {
-    (0,custom_select__WEBPACK_IMPORTED_MODULE_0__["default"])(item);
-  });
-}
-console.log('TEST');
-})();
-
-// This entry need to be wrapped in an IIFE because it need to be in strict mode.
-(() => {
-"use strict";
 /*!*****************************!*\
   !*** ./src/scripts/main.js ***!
   \*****************************/
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var custom_select__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! custom-select */ "./node_modules/custom-select/build/index.js");
+/* harmony import */ var _modules_custom_select__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/custom-select */ "./src/scripts/modules/custom-select.js");
+/* harmony import */ var _modules_lw_multiple_checker__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/lw-multiple-checker */ "./src/scripts/modules/lw-multiple-checker.js");
+/* harmony import */ var _modules_lw_multiple_checker__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_modules_lw_multiple_checker__WEBPACK_IMPORTED_MODULE_1__);
+
 
 })();
 

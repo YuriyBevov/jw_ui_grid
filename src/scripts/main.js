@@ -1,1 +1,2 @@
-import 'custom-select'
+import './modules/custom-select'
+import './modules/lw-multiple-checker'

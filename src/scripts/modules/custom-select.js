@@ -6,5 +6,3 @@ if(items) {
     customSelect(item);
   })
 }
-
-console.log('TEST');
