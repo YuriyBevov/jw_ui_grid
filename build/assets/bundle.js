@@ -54,6 +54,21 @@ document.addEventListener("DOMContentLoaded", function () {
     };
     selecter.addEventListener('change', onClickToggleCheckboxes);
   });
+  const ctrls = document.querySelectorAll('.lw-control-group input[type="checkbox"]:not(.lw-checkbox-group-head-control input[type="checkbox"])');
+  if (!ctrls.length) return;
+  const onChangeSetHeadControlActive = evt => {
+    const group = evt.target.closest('.lw-control-group');
+    const checkboxes = group.querySelectorAll('input[type="checkbox"]');
+    const checkedCheckboxes = group.querySelectorAll('input[type="checkbox"]:checked');
+    if (checkboxes.length === checkedCheckboxes.length) {
+      group.previousElementSibling.querySelector('input[type="checkbox"]').checked = true;
+    } else {
+      group.previousElementSibling.querySelector('input[type="checkbox"]').checked = false;
+    }
+  };
+  ctrls.forEach(ctrl => {
+    ctrl.addEventListener('change', onChangeSetHeadControlActive);
+  });
 });
 
 /***/ }),
